@@ -1,0 +1,168 @@
+
+
+/*baner*/
+
+.bannerNew {
+	background: url(../../../assets/img/innerBanner/board.jpg) no-repeat center center;		
+	background-size: cover;	
+	height: 400px;				
+	position: relative;
+	
+}
+.innerNew {
+	display: block;
+	background: #000000ab;
+	width: 100%;
+	height: 400px;
+}
+.leftItem, .rightItem {
+	position: absolute;
+	top: 150px;
+	display: inline-block;
+	width:45%;
+}
+
+.rightItem {		
+	top: 120px;	
+	right: 5%;
+	text-align: right;	
+}
+
+
+
+.leftItem {
+	left: 7%;
+}
+
+
+
+
+.innerNew img {
+	width: 60% !important;
+}
+.rightItem img{
+	width: 25% !important;
+}
+
+.overlay img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	/* margin: 8% 2%; */
+	max-height: 800px;
+}
+
+
+
+@media only screen and (min-width: 1500px ) and (max-width: 1600px){
+	.rightItem img {
+		width: 36%!important
+	}
+}
+@media only screen and (min-width: 1300px ) and (max-width: 1499px){
+	.rightItem img {
+		width: 35%!important
+	}
+	
+}
+
+
+@media only screen and (min-width: 1100px ) and (max-width: 1299px){
+	.rightItem img {
+		width: 38%!important
+	}
+	
+}
+
+@media only screen and (min-width: 1000px ) and (max-width: 1099px){
+	.rightItem img {
+		width: 42%!important
+	}
+	
+}
+
+@media only screen and (min-width: 250px ) and (max-width: 520px){
+	.rightItem {
+		display: none!important;
+	}
+	.leftItem {
+		left: 3%;
+		text-align: center;
+		bottom: 0;
+		top: 45%;
+		right: 0;
+		margin: auto;
+	}
+	.innerNew img {
+		width: 120% !important;
+	}
+}
+
+
+/*inner baner*/
+
+
+
+.gallery {
+	background: url(../../../assets/img/innerBanner/Gallery_Banner.jpg) no-repeat bottom left;
+	background-size: cover;
+	
+	height: 500px;
+	text-align: center;    
+	color: #fff;
+	padding-top: 11%;
+}
+.gallery-main {
+	
+	background: #fff;
+	padding: 2%;
+	margin-top: -10%;
+}
+
+img{
+	transition:all 0.2s ease-in-out;
+}
+.row img:hover{
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	z-index:99999;
+}
+
+div#list-tab a {
+	cursor: pointer;
+}
+
+
+
+
+@media only screen and (min-width: 320px ) and (max-width: 520px){
+	.gallery h1 {
+		margin-top: 38%;
+		font-size: 30px;
+	}	
+	
+}
+
+
+
+
+.overlay {
+	background: rgba(0, 0, 0, 0.8)!important;
+	padding: 5%;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 99999999999;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+
+div#list-tab {
+    overflow-y: scroll;
+    height: 500px;
+}

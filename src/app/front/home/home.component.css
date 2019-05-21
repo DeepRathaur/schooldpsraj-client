@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+
+.logo img {
+	width: 154px;
+}
+
+
+.logo {
+	position: fixed;
+	top: 11px;
+	left: 58px;
+	z-index: 9;
+}
+
+
+
+.imageHolderThreeSix div.Smart_Clases {display: block}
+
+.nav {
+	display: block;
+}
+
+ul.nav.nav-pills li {
+	line-height: 66px;
+	margin: 10px 0px;
+	font-size: 20px;
+	border-bottom: 1px solid #000000 !important;
+	color: #000 
+}
+
+
+li.nav-item a {
+	color: #000;
+}
+
+li.nav-item a:hover {
+	color: #006b4f;
+}
+
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+
+	background-color: #000000;
+}
+
+
+
+.nav-item span {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 29px;
+	margin-right: 10px;
+}
+
+.nav-link {
+	display: inline-block;
+}
+
+.nav-link a {
+	background-color: #fff !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+	background-color: transparent;
+}
+
+/*.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+	color: #000;
+	}*/
+
+	.nav-link {
+
+		padding: 0!important
+	}
+
+	li.nav-item a {
+		display: block
+	}
+
+	.achiItem.topper::after {
+		content: 'All India topper - 3';
+		width: 90%;    
+		background: #4caf50a1;
+		position: absolute;
+		top: 180px;
+		right: 0;
+		text-align:center;
+		text-transform:uppercase;
+		color:#fff;
+		left:10px;
+		border-radius:10px
+
+	}
+
+
+	.imageHolderThreeSix img, .tab-content img { transition: all .2s ease-in-out; }
+	.imageHolderThreeSix img:hover, .tab-content img:hover  {  transform: scale(1.1);  }
+
+
+
+
+
+	.itemAchiver {
+		background: rgba(8,86,8,.91);
+		width: 194px;
+
+		margin: 10px;
+		display: inline-block;
+		padding: 4px;
+		color: #fdd700;
+		font-size: 14px;
+		line-height: 19px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.itemAchiver img {
+		width: 100%;
+	}
+	span.imgs {
+		width: 100%;
+		height: 224px;
+		overflow: hidden;
+		display: block;
+		position: relative;
+	}
+
+	span.topperText {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		background: yellow;
+		color: #000;
+		font-weight: bold;
+	}
+
+
+	.imageHolderThreeSix img {
+	    width: 400px;
+	    float: left;
+	    margin: 2px;
+	}
+
+
+
+
+
+	@media only screen and (max-width: 520px){
+		span.topperText {
+			font-size: 9px}
+
+			.itemAchiver {
+
+				width: 40%;
+			}
+			span.imgs {
+				height: 156px
+
+			}
+			ul.nav.nav-pills li {    
+				line-height: auto;
+				font-size: 14px;
+				margin: 2px 0px;
+				line-height: 72px;
+			}
+
+			li.nav-item {	    
+				height: auto;
+			}
+			#youtube{
+				width:94% !important; 
+				height:auto !important;
+			}
+
+
+
+
+			.imageHolderThreeSix {
+				margin-top: 15px;
+
+			}
+
+			.imageHolderThreeSix{
+				width:100%;		
+				padding:1%;
+			}
+			.page-main{
+				padding: 4% 0%;
+			}
+			.page-side h2{
+				width: 420px;
+				margin-left: 14px;
+			}
+
+		}
+
+
+
+		@media only screen and (max-width: 375px) {
+			img#mainThreeSixty {
+				width:300px;
+				height: 300px
+			}
+
+			.MailRoundHolder {
+				width: 300px !important;
+				float: none !important;
+				margin: 0;
+				padding: 0;
+				margin-left: 10px;
+				text-align: center;
+			}
+
+			.MailRoundHolder span {
+				font-size: 9px!important;
+				line-height: 15px !important;
+			}
+
+			.MailRoundHolder > span.text.Security {
+				top: 49px !important;
+				left: 89px!important;
+			}
+
+			.MailRoundHolder span.text.Well_Strocked_Liberaries {
+				top: 34px!important;
+				left: 159px!important;
+				font-size: 9px;
+				width: 50px!important;
+			}
+
+			.MailRoundHolder span.text.Counselor_Room {
+				top: 170px!important;
+				left: 204px!important;
+				width: 75px!important;
+			}
+
+			.MailRoundHolder span.text.Specially_Abled_Friendly {
+				top: 219px!important;
+				left: 157px!important;
+				width: 55px!important;
+				font-size: 7px;
+			}
+
+			.MailRoundHolder span.text.Smart_Clases {
+				top: 218px!important;
+				left: 97px!important;
+				width: 36px !important;
+			}
+
+			.MailRoundHolder span.text.GPN_Enabled_Buses {
+				top: 174px!important;
+				left: 23px!important;
+				width: 80px!important;
+			}
+
+			.MailRoundHolder span.text.Mulit_Specility_Clinic {
+				top: 92px!important;
+				left: 21px!important;
+				width: 75px!important;
+			}
+
+			.MailRoundHolder span.text.Resource_Center {
+				top: 98px !important;
+				left: 218px !important;
+				width: 50px !important;
+				text-align: center;
+			}
+
+
+		}
+
+
+
+
+
+
+		@media only screen and  (min-width: 321px) and (max-width: 375px){
+			.MailRoundHolder {			
+				margin-left: 30px;			
+			}
+
+		}
+
+
+
+		@media only screen and (min-width: 376px) and (max-width: 520px){
+			.MailRoundHolder {
+				margin-left: 1%;
+			}
+
+
+		}
+
+
+
+
+		@media only screen and  (max-width: 1000px){
+			.page-content {				
+				width: 100%;
+				float: left;
+				text-align: center;
+				margin-top: 23px;
+			}
+
+		}
+
+
+
+		@media only screen and (min-width: 1200px) and (max-width: 1860px){
+			.imageHolderThreeSix img{width: 47%}
+		}
+
+		
+
+
+
+		#youtube{
+			width:400px; 
+			height:315px;
+		}
+
+
+
+
+#testimonial{
+	background: url(../../../assets/img/testimonialBack.jpg);
+    background-repeat: repeat;
+    padding: 1%;
+    margin: 69px 0px;
+    border: 8px solid #898c81;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 104px;
+    -webkit-box-shadow: 2px 2px 2px #9e9e9e;
+    box-shadow: 2px 2px 2px #9e9e9e;
+    border-left: 0;
+    border-right: 0;
+       height: auto;
+    padding-bottom: 3.5%;
+
+}
+.happyParentsIcon{
+	background: url('../../../assets/img/icons.png') no-repeat -537px -79px;
+		width: 36px;
+		height: 40px;
+}
+span.happyParentsIcon {
+    display: inline-block;
+    margin-right: 16px;
+ 
+}
+
+h2.hpHeading {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -12px;
+    
+}
+
+

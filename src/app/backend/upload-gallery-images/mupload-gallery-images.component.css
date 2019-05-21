@@ -1,0 +1,17 @@
+.uploadOverlay {
+    position: fixed;
+    background: #f9f9f9a3;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.uploadOverlay img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 18%;
+}

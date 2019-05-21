@@ -1,0 +1,54 @@
+ul.mainNav li:hover {  
+    opacity: 0.75;
+    -webkit-transform: translateY(3px); 
+    transform: translateY(3px);
+
+}
+
+
+.admissionIcon{
+	background: url('../../../assets/img/icons.png') no-repeat -575px -28px;
+	width: 43px;
+    height: 48px;
+    display: inline-block;    
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+.mile-icon{
+    background: url('../../../assets/img/icons.png')no-repeat -516px -131px;
+    width: 33px;
+    height: 36px;
+    display: inline-block;
+    margin-right: 12px;    
+    vertical-align: middle;
+}
+
+    
+
+
+
+ul.slider-main li:hover, ul.slider-main li:active {
+    background: #006b4f;
+}
+
+ul.slider-main li:hover > ul.subMenu, ul.slider-main li:active > ul.subMenu {background:#006b4f}
+
+@media only screen and (max-width: 520px){
+    div#nav { width: 59px;}
+    span.menu {height: 73px;}
+    #nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 { width: 39px;}
+    .nav-slider { right: 59px;}
+    ul.slider-main li {line-height: 5em;font-size: 14px;}
+    span.down-arrow { top: 21px;}
+    ul.subMenu li {font-size: 12px;}
+    .iconMenu {left: 2px;}
+    
+}
+
+
+
+@media only screen and (min-width: 521px ) and (max-width: 3000px){
+     div#nav{ height: 100% !important;}
+}

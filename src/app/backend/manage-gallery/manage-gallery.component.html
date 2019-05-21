@@ -1,0 +1,336 @@
+<div class="container-fluid" *ngIf="!viewImage">
+	<div class="row mt-5 text-center">
+		<div class="col-sm-12">
+			<h4 class="mt-4 text-secondary ">Manage Gallery</h4>
+		</div>
+	</div>
+
+	<div class="row mt-3">
+		<div class="col-sm-6">
+
+			<div class="card" *ngIf="!creatCate && !editCategory">
+				<div class="card-header">
+					Category
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table  table-bordered table-sm">
+							<thead>
+								<tr>
+									<td>S. No</td>
+									<td>Category Name</td>
+									<td>Remove Category</td>
+									<td>Edit Category</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr *ngFor="let item of categoryArr; let i = index">
+									<td>{{i+1}}</td>
+									<td>{{item.name}}</td>
+									<td><button class="btn btn-sm btn-danger" (click)="trashCategory(item.id)"><span class="icon-trash"></span></button></td>
+									<td><button class="btn btn-sm btn-warning" (click)="editCategoryFun([item.name,item.id])"><span class="icon-pencil"></span></button></td>
+								</tr>							
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-success" (click)="createCategory()">Create New Category</button>
+				</div>
+			</div>
+
+			<!-- //create new category -->
+			<form  #f="ngForm">
+				<div class="card" *ngIf="creatCate && !editCategory">
+					<div class="card-header">Create New Category</div>
+					<div class="card-body">
+						<div class="form-group">
+							<label for="">Category Name</label>
+							<input type="text" class="form-control" name="createNewCategory" required [(ngModel)]="newCategory.name">
+						</div>
+					</div>
+					<div class="card-footer">
+						<button class="btn  btn-success" (click)="saveCategory()" [disabled]="!f.valid">Save Category </button>
+						<button class="btn btn-danger" (click)="cancelNewCategory()"> Cancel</button>
+					</div>
+				</div>
+			</form>
+
+
+			<!-- //edit category -->
+			<div class="card" *ngIf="editCategory">
+				<div class="card-header">Edit Category</div>
+				<div class="card-body">
+					<div class="form-group">
+						<label for="">Category Name</label>
+						<input type="text" class="form-control" name="editCategoryName" [(ngModel)]="editCategoryName.name" [placeholder]="editItemName">
+					</div>
+
+				</div>
+				<div class="card-footer">
+					<button class="btn  btn-success" (click)="updateCategoryFun()">Update Category </button>
+					<button class="btn btn-danger" (click)="cancelEditCategory()"> Cancel</button>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+
+
+		<div class="col-sm-6">
+			<div class="card" *ngIf="!createEvent && !updateEventFlg">
+				<div class="card-header ">
+				All Events			</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table  table-bordered table-sm">
+							<thead>
+								<tr>
+									<td>S. No</td>
+									<td>Category</td>
+									<td>Event Name</td>
+									<td>Remove Event</td>
+									<td>Edit Event</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr *ngFor="let item of eventsArr; let i = index">
+									<td>{{i+1}}</td>
+									<td>{{item.Category.name}}</td>
+									<td>{{item.name}}</td>
+									<td><button class="btn btn-sm btn-danger" (click)="trashEvent(item.id)"><span class="icon-trash"></span></button></td>
+									<td><button class="btn btn-sm btn-warning" (click)="editEvent([item.id, item.name])"><span class="icon-pencil"></span></button></td>
+								</tr>								
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-warning" (click)="createEventFun()">Create New Event</button>
+				</div>
+			</div>
+
+			
+			<!-- create New Event -->
+			<div class="card" *ngIf="createEvent">
+				<div class="card-header ">
+				Create New Event	</div>
+				<div class="card-body">
+					<div class="form-group">
+						<label for="">Select Category</label>
+						<select  [(ngModel)]="createNewEvent.category_id" class="form-control">
+							<option value="{{item.id}}" *ngFor="let item of categoryArr">{{item.name}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="">Event Name</label>
+						<input type="text" class="form-control" name="createNewEvent" [(ngModel)]="createNewEvent.name">
+					</div>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-success" (click)="seveEvent()"> Save Event</button>
+					<button class="btn btn-danger" (click)="cancelEvent()"> Cancel</button>
+				</div>
+			</div>
+
+
+
+
+			<!-- update Event -->
+			<div class="card" *ngIf="updateEventFlg">
+				<div class="card-header">
+				Update Event	</div>
+				<div class="card-body">
+					<div class="form-group">
+						<label for="">Event Name</label>
+						<input type="text" class="form-control" name="createNewEvent" [(ngModel)]="updateEvent.name" >
+					</div>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-success" (click)="updateEventFun()"> Update Event</button>
+					<button class="btn btn-danger" (click)="cancelUpdateEvent()"> Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- <div class="row mt-5">
+		<div class="col-sm-12">
+			<h3>All Gallery Images</h3>
+			<div class="table-responsive">
+				<table class="table  table-striped table-bordered table-sm">
+					<thead>
+						<tr>
+							<td>S. No</td>
+							<td>Category Name</td>
+							<td>Event Name</td>
+							<td>Total Photo</td>
+							<td>View photo</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Pre-primary</td>
+							<td>15 August Event</td>
+							<td>50</td>
+							<td><button class="btn btn-info" (click)="viewImageFun()">View </button></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Primary</td>
+							<td>Diwali Celebration</td>
+							<td>150</td>
+							<td><button class="btn btn-info" (click)="viewImageFun()">View </button></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Middle</td>
+							<td>Janoon</td>
+							<td>85</td>
+							<td><button class="btn btn-info" (click)="viewImageFun()">View </button></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Senior</td>
+							<td>Music and dance</td>
+							<td>22</td>
+							<td><button class="btn btn-info" (click)="viewImageFun()">View </button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div> -->
+	<br><br>
+
+</div>
+
+
+<!-- view all -->
+<div class="viewAll" *ngIf="viewImage"><!-- 
+	<div class="container-fluid mt-3">				
+
+		<div class="row">
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+
+			<div class="col-sm-3 ">
+				<img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350" class="img-thumbnail" alt="">			
+			</div>
+			<br><br><br><br><br><br><br><br>
+			<div class="viewControl " >
+				<div class="container-fluid">
+					<div class="row">
+
+
+						<div class="col-sm-3 text-dark">
+							Category : Pre-Primary
+						</div>
+						<div class="col-sm-3 text-dark">
+							Event Name : 15 August 
+						</div>
+						<div class="col-sm-3 text-dark">
+							Total No of Pics: 125
+						</div>
+						<div class="col-sm-3">
+							<button class="btn btn-light btn-sm">Load More</button>
+							<button class="btn btn-dark btn-sm">Close</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+--></div>

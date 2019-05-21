@@ -1,0 +1,799 @@
+
+<div class="bannerNew">
+	<div class="innerNew">
+		<div class="leftItem"><img src="../../assets/img/innerBanner/academics/Academics.png" alt=""></div>
+		<div class="rightItem"><img src="../../assets/img/innerBanner/academics/book_pencile.png" alt=""></div>
+	</div>
+</div>
+
+
+<div class="container-fluid">
+	<div class="row mt-5 forMobile" >
+
+		<div class="col-sm-12">
+			<div class="card mb-5">
+				<div class="card-header bg-success text-white "><h4>Trained Faculty</h4></div>
+				<div class="card-body">
+					DPS Rajnagar is one of the elite educational institutions in the city. The Institution is ably supported by a large and extremely dedicated support staff which includes assistants, researchers, house-keeping personnel, trained paramedics, etc. The Institution has one of the best employee remuneration programmes, while leaving no stone unturned to provide career-enhancement training forums, like awareness workshops, multi-skills training and advanced courses. This translates in to very well groomed and knowledgeable students who remain the much admired benchmark for other Institutions in the city, and elsewhere, to emulate such measures have enhanced the pride and self-respect of each member of this Institution and has therefore been the cause of a very low attrition rate, while being a more than happy workforce who take pride in what they accomplish. The dedicated staff provides students a caring and individual attention, making sure that each child keeps-up with its respective peer group.
+
+
+				</div>					
+			</div>
+
+			<div class="card mb-5">
+				<div class="card-header bg-info text-white "><h4>Academic Focus</h4></div>
+				<div class="card-body">
+					DPS Rajnagar follows the syllabus as prescribed by the CBSE. It is our constant endeavour to direct each child to become a motivated lifelong learner by experiencing the joy of discovery and ownership of results. Our curriculum has been structured to ensure that knowledge is important through a combination of resources and techniques making the learning process exciting and easy to comprehend. Class room teaching, multi media workshops, exchange programmes, co-curricular activities and excursions help children gain inside knowledge at various levels.
+
+				</div>					
+			</div>
+
+			<div class="card mb-5">
+				<div class="card-header bg-danger text-white "><h4>Fair Assesment</h4></div>
+				<div class="card-body">
+					Evaluation is an important area of child’s development for DPS Rajnagar. DPS Rajnagar has implemented a system of comprehensive and continuous evaluation as per the guidelines of CBSE. Comprehensive and Continuous Evaluation (CCE) not only benchmarks the academic achievement of students but also assesses other facets like physical growth, emotional stability and the child’s success in ranking equally amongst his or her peer group. Regular parent teacher meetings and a constant updation of each student profile on the school portal will keep parents abreast of the child development.
+
+				</div>					
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+
+
+<div class="row mt-5 mb-5 forDesktop" >
+	<div class="container-fluid">
+		<div class="col-sm-11 mx-auto">
+			<div class="row">
+				
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-md-6 col-xl-4">
+					<app-top-design ></app-top-design>
+				</div>
+				<div class="col-sm-6 col-md-6 col-xl-8">
+					<div class="acadGroup">
+
+						<div class="acadFirst" *ngIf="TrainedFaculty">DPS Rajnagar is one of the elite educational institutions in the city. The Institution is ably supported by a large and extremely dedicated support staff which includes assistants, researchers, house-keeping personnel, trained paramedics, etc. <span class="hideMe">The Institution has one of the best employee remuneration programmes, while leaving no stone unturned	</span><br>					
+							<button class="btn btn-sm mt-1 float-right  text-white" style="background: #f4bc26;" (click)="readMore('TrainedFaculty')">Read More</button>												
+						</div>
+						<div class="acadFirst full" *ngIf="TrainedFaculty_full">
+							<h5>Trained Faculty</h5>
+							DPS Rajnagar is one of the elite educational institutions in the city. The Institution is ably supported by a large and extremely dedicated support staff which includes assistants, researchers, house-keeping personnel, trained paramedics, etc. The Institution has one of the best employee remuneration programmes, while leaving no stone unturned to provide career-enhancement training forums, like awareness workshops, multi-skills training and advanced courses. This translates in to very well groomed and knowledgeable students who remain the much admired benchmark for other Institutions in the city, and elsewhere, to emulate such measures have enhanced the pride and self-respect of each member of this Institution and has therefore been the cause of a very low attrition rate, while being a more than happy workforce who take pride in what they accomplish. The dedicated staff provides students a caring and individual attention, making sure that each child keeps-up with its respective peer group.
+
+
+							<br>
+							<br>
+
+							<button class="btn btn-sm mt-1 float-right" style="background: #f4b825;" (click)="back('TrainedFaculty')">Back</button>
+						</div>
+
+
+
+
+
+
+						<div class="acadSecond" *ngIf="academicFocus">DPS Rajnagar follows the syllabus as prescribed by the CBSE. It is our constant endeavour to direct each child to become a motivated  <span class="hideMe"> lifelong learner by experiencing the joy of discovery and ownership of results.</span><br>
+							<button class="btn btn-sm mt-1 float-right text-white" style="background: #2dbdff;" (click)="readMore('academicFocus')">Read More</button>
+						</div>
+						<div class="acadSecond full" *ngIf="academicFocus_full">
+							<h5>Academic Focus</h5>
+							DPS Rajnagar follows the syllabus as prescribed by the CBSE. It is our constant endeavour to direct each child to become a motivated lifelong learner by experiencing the joy of discovery and ownership of results. Our curriculum has been structured to ensure that knowledge is important through a combination of resources and techniques making the learning process exciting and easy to comprehend. Class room teaching, multi media workshops, exchange programmes, co-curricular activities and excursions help children gain inside knowledge at various levels.
+
+							<br>
+							<br>
+
+							<button class="btn btn-sm mt-1 float-right" style="background: #2dbdff;" (click)="back('academicFocus')">Back</button>
+						</div>
+
+
+
+
+						<div class="acadThird" *ngIf="fairAssesment">Evaluation is an important area of child’s development for DPS Rajnagar. DPS Rajnagar has implemented a system of comprehensive and continuous evaluation as per the guidelines of CBSE.<br>
+							<button class="btn btn-sm mt-1 float-right text-white" style="background: #d5169f;" (click)="readMore('fairAssesment')">Read More</button>					
+						</div>
+						<div class="acadThird full" *ngIf="fairAssesment_full">
+							<h5>Fair Assesment</h5>
+							Evaluation is an important area of child’s development for DPS Rajnagar. DPS Rajnagar has implemented a system of comprehensive and continuous evaluation as per the guidelines of CBSE.  <span class="hideMe">Comprehensive and Continuous Evaluation (CCE) not only benchmarks the academic achievement of students but also assesses other facets like physical growth, emotional stability and the child’s success in ranking equally amongst his or her peer group. Regular parent teacher meetings and a constant updation of each student profile on the school portal will keep parents abreast of the child development.</span>
+
+
+							<br>
+							<br>
+
+							<button class="btn btn-sm mt-1 float-right" style="background: #d8139c;" (click)="back('fairAssesment')">Back</button>
+						</div>	
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="group bg-light mt-3 mb-5" >
+
+
+<br>
+
+
+
+	<div class="row ">
+
+		<div class="container-fluid">
+			<div class="col-sm-11 mx-auto">
+
+					<h2>Our Infrastructure</h2>
+				
+				<div class="acadTab">
+					<ul>
+						<li class="first"><a (click)="main('OUR_CAMPUS')" [ngClass]="{'active':OUR_CAMPUS}">OUR CAMPUS</a></li>
+						<li class="second active"><a (click)="main('EXCLUSIVE_SERVICES')" [ngClass]="{'active':EXCLUSIVE_SERVICES}">EXCLUSIVE SERVICES</a></li>				
+						<li class="third"><a (click)="main('STAGES_OF_STUDY')" [ngClass]="{'active':STAGES_OF_STUDY}">STAGES OF STUDY</a></li>
+						<li class="Fourth"><a (click)="main('STREAMS')" [ngClass]="{'active':STREAMS}">STREAMS & SUBJECTS</a></li>
+						<li class="fifth"><a (click)="main('THE_DPS')" [ngClass]="{'active':THE_DPS}">THE DPS EDGE</a></li>
+						<li class="sixth"><a (click)="main('co_curr')" [ngClass]="{'active':co_curr}">CO-CURRICULAR </a></li>				
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="bounceInLeft delay-2s" [ngStyle]="{'background':color, 'height':'4px'}"></div>
+	<!-- our campus -->
+
+
+
+
+
+
+
+
+	<div class="row mt-2 " *ngIf="OUR_CAMPUS">
+		<div class="container-fluid bg-light p-5">
+			<div class="col-sm-11 mx-auto">		
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="row ">
+							<div class="box" [ngClass]="{'active': A_COMPREHENSIVE_TRINITY_sub}" >
+								<a (click)="tab('A_COMPREHENSIVE_TRINITY_sub')" >
+									A COMPREHENSIVE TRINITY
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': THE_TEACHER_TAUGHT_BOND_sub}">
+								<a (click)="tab('THE_TEACHER_TAUGHT_BOND_sub')">
+									THE TEACHER TAUGHT BOND
+
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': SCHOOL_PARENT_PARTNERSHIP_sub}">
+								<a (click)="tab('SCHOOL_PARENT_PARTNERSHIP_sub')">
+									SCHOOL-PARENT PARTNERSHIP 
+
+								</a>
+							</div>					
+							<div class="box" [ngClass]="{'active': CONTRIBUTING_CITIZENS_sub}">
+								<a (click)="tab('CONTRIBUTING_CITIZENS_sub')">
+									CONTRIBUTING CITIZENS
+								</a>
+							</div>
+
+
+						</div>
+					</div>
+					<div class="col-sm-6" *ngIf="A_COMPREHENSIVE_TRINITY_sub">
+						<!-- <h2 >Campus</h2>
+						<p>Children need space to spread out their wings. The designers and planners of our campus have kept that in mind throughout. Large, air conditioned airy classrooms equipped with multi-media tools, varied activity zones, ample areas for sports, and an administrative services block, functions as a dynamic, connected whole – linked by wide corridors and courtyards. Every day your child can look forward to the well- equipped Resource Centre with its well- stocked library, audio-visual room, multi- media centre and laboratories for building skills in computers, maths, sciences, languages, etc.</p> -->
+
+						
+						<h2 >A COMPREHENSIVE TRINITY</h2>
+						<p>To ensure the success of the journey which begins in the classroom and goes beyond its boundaries into the real world, an unstinted participation of all stakeholders in the DPS learning process is obligatory. The students, teachers and parents need to work in tandem so that concepts and values that we all hold dear are effectively absorbed and reinforced. We wholeheartedly embrace the participation of parents in the education of their children.</p>
+
+					</div>
+
+
+					<div class="col-sm-6" *ngIf="THE_TEACHER_TAUGHT_BOND_sub">
+						<h2 >THE TEACHER-TAUGHT BOND </h2>
+						<p>The relationship between a teacher and the child is the very basis of the child’s security and happiness in school. In this relationship, the child is allowed to relax and express his/her views. The teacher responds and guides the child, constantly focusing on his/her strengths and special needs and also bearing in mind the child’s learning curve</p>
+					</div>
+
+					<div class="col-sm-6" *ngIf="SCHOOL_PARENT_PARTNERSHIP_sub">
+						<h2 >SCHOOL-PARENT PARTNERSHIP</h2>
+						<p>The DPS system of education is a close partnership between home and school. There is a variety of productive ways in which parents are encouraged to associate with the school in providing the best possible education of their children – volunteering either on a regular basis or just occasionally by helping in a classroom; joining with other parents to organise and participate in School events.</p>
+
+
+						<p>Parent-Teacher communication receives emphasis in an effort to strengthen the bridge among students, teachers and parents. Parents are encouraged to participate in orientation programmes and build meaningful relationships with teachers, thereby taking active part in their child’s learning activities.</p>
+
+						<p>The School portal provides the forum for teachers and parents to share insights about the child’s learning experience and performance. Inputs are provided to parents on nurturing skills, guidance for homework and general parenting.</p>
+					</div>
+
+					<div class="col-sm-6" *ngIf="CONTRIBUTING_CITIZENS_sub">
+						<h2 >CONTRIBUTING CITIZENS </h2>
+						<p>Formal education is of little importance unless it contributes to a better life for the community at large. Every Dipsite is proud to lend his/her hand in creating a better environment in and out of school. Children at DPS RAJNAGAR are introduced to environmental issues like conservation of water and electricity, planting trees and saying ‘no to crackers’. Students are also encouraged to improve community living through various projects such as sanitation drives and vocational programmes.</p>
+					</div>
+
+				</div>		
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- exelusive service sasas -->
+	<div class="row mt-2" *ngIf="EXCLUSIVE_SERVICES">
+		<div class="container-fluid bg-light p-5">
+			<div class="col-sm-11 mx-auto">		
+				<div class="row ">
+
+					<div class="col-sm-6">
+						<div class="row">
+							<div class="box " [ngClass]="{'active': SCHOOL_CLINIC_sub}">
+								<a (click)="tab('SCHOOL_CLINIC_sub')" >
+									SCHOOL CLINIC
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': SCHOOL_COUNSELLOR_sub}">
+								<a (click)="tab('SCHOOL_COUNSELLOR_sub')" >
+									SCHOOL COUNSELLOR
+
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': SCHOOL_LIBRARY_sub}">
+								<a (click)="tab('SCHOOL_LIBRARY_sub')">
+									SCHOOL LIBRARY
+
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': LEARNING_DISABILITIES_sub}">
+								<a (click)="tab('LEARNING_DISABILITIES_sub')">
+									LEARNING DISABILITIES
+
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': CAREER_COUNSELLING_sub}">
+								<a (click)="tab('CAREER_COUNSELLING_sub')" >
+									CAREER COUNSELLING
+								</a>
+							</div>
+
+							<div class="box" [ngClass]="{'active': AWARDS_sub}">
+								<a (click)="tab('AWARDS_sub')" >								
+									AWARDS
+								</a>
+							</div>
+
+							<div class="box" [ngClass]="{'active': REMEDIAL_CLASSES_sub}">
+								<a (click)="tab('REMEDIAL_CLASSES_sub')">
+									REMEDIAL CLASSES
+								</a>
+							</div>
+
+							<div class="box" [ngClass]="{'active': PUBLIC_EXAMINATION_sub}">
+								<a (click)="tab('PUBLIC_EXAMINATION_sub')">
+									PUBLIC EXAMINATION
+								</a>
+							</div>	
+						</div>
+					</div>
+					<div class="col-sm-6" *ngIf="SCHOOL_CLINIC_sub">
+						<h2>SCHOOL CLINIC</h2>
+						<p>We have a fully equipped four bed clinic in the school manned by a qualified doctor and a trained nurse. Apart from giving first aid during the school hours, we take care of the following functions:</p>
+						<ul>
+							<li>Hygiene check of the students.</li>
+							<li>Health check up by specialists during the Health Week.</li>
+							<li>Information about Health Education to the students.</li>
+							<li>Safety and first-aid education to the students</li>
+							<li>Keeping health records of the students.  </li>
+						</ul>
+					</div>
+
+
+					<div class="col-sm-6" *ngIf="SCHOOL_COUNSELLOR_sub">
+						<h2>SCHOOL COUNSELLOR</h2>
+						<p>The school counsellor is a specialist in child psychology and, therefore, plays a vital role in the development of children who need special attention and support.</p>
+
+						<p>Education being multifaceted, it not only influences the child's mental faculties but also his/her emotional and social quotient. Likewise the emotional and the social factors influence the child's academic performance. Children pass through many stages during their school life. For most, this transfer is effortless, while others require some push to join the mainstream. There are also some children who face difficulty in grasping through usual methods of teaching within the stipulated time. Usually for children with learning disabilitiesorslowlearnersweimpartpersonalattentionto remain at par with their classmates.  </p>
+
+						<p>The Counsellor co-ordinates with the teachers to identify the children with learning disabilities and those who are hyperactive, aggressive, impulsive or display undesirable behavioural patterns. Thereafter, these children are constantly monitored by the counsellor. Parents can also approach the counsellor to discuss the changes in their child's behaviour. Often modifications in the parenting styles resolve the problems and leads to the positive parent-child relationship.  </p>
+
+						<p>Thus, we at Delhi Public School Agra ensure that all children get the individual attention they deserve so that we may identify their strengths and help them overcome their challenges; thereby creating responsible citizens of the future.</p>
+					</div>
+
+
+
+					<div class="col-sm-6" *ngIf="SCHOOL_LIBRARY_sub">
+						<h2>SCHOOL LIBRARY</h2>
+						<p>The school library is open to all the bonafide students of the school. All the classes are provided with one library period per week. </p>
+
+						<p><b>The students should observe the following rules with regard to library use :</b></p>
+						<ul>								
+							<li>All students must come to the library in a single file according to their roll numbers.</li>
+							<li>They must maintain absolute silence in the library.</li>
+							<li>The library has an 'open access system', i.e., the children are allowed to go directly to the shelves and take a book of their choice.</li>
+							<li>They must put the books back on the same shelf after reading, to maintain order and organization in the library.</li>
+							<li>Students are not allowed to bring their personal books or belongings to the library.</li>
+							<li>Each student must bring his/her Almanac and a pencil to the library.</li>
+							<li>They must keep a track of books read by them during their library period in their library record .</li>
+							<li>Any student found damaging or defacing a book will be debarred from availing library facilities for the whole academic year.</li>
+						</ul>
+					</div>
+
+					<div class="col-sm-6" *ngIf="LEARNING_DISABILITIES_sub">
+						<h2>LEARNING DISABILITIES</h2>
+						<p>A child with a learning disability is said to learn differently. Early identification and remedial teaching using multi-sensory techniques helps a child overcome his/her difficulties to a very large extent.</p>
+						<p>Famous personalities like Isaac Newton, Winston Churchill, Leonardo-da-Vinci, and Albert Einstein all had difficulty in learing to read and write. So it is of utmost importance that we not only help the child to learn differently but also identify his strengths and provide proper training and guidance.</p>
+					</div>
+
+					<div class="col-sm-6" *ngIf="CAREER_COUNSELLING_sub">
+						<h2>CAREER COUNSELLING</h2>
+						<p>We provide career councelling and guidance to students and their parents periodically on how to achieve their goals and meet their challenges through an expert professional Counsellor and Guide appointed by School.  </p>
+						<p>Parents may be given an opportunity to consult the expert on a one to one basis for grades IX-XII students.</p>
+					</div>
+
+
+
+					<div class="col-sm-6" *ngIf="AWARDS_sub" >
+						<h2>AWARDS</h2>
+						<p>Scholar Badges and Certificates are awarded every year to meritorious students who secure the highest percentage in each class in the final exam.  </p>
+						<p>Merit and Participation Certificates are issued to students throughout the year for various activities, competitions and assembly activities at the intra-class, inter-section, and inter-house levels.</p>
+					</div>
+
+
+					<div class="col-sm-6" *ngIf="REMEDIAL_CLASSES_sub">
+						<h2>REMEDIAL CLASSES</h2>
+						<p>The school arranges for remedial classes to help students improve their scholastic performance. In such a situation the parents are expected to co-operate by dropping and picking ward to and from the school accordingly. </p>
+					</div>
+
+
+					<div class="col-sm-6" *ngIf="PUBLIC_EXAMINATION_sub">
+						<h2>PUBLIC EXAMINATION</h2>
+						<p>The school prepares and guides the students for taking the prestigious National Talent Search Examination (NTSE), National Standards Examination (NSE), Olympiads, counducted by CBSE and other meaningful examinations conducted by reputed organisations across the globe. </p>
+					</div>
+
+				</div>		
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- stages of study -->
+
+	<div class="row mt-2" *ngIf="STAGES_OF_STUDY">
+		<div class="container-fluid bg-light p-5">
+			<div class="col-sm-11 mx-auto">		
+				<div class="row  " >
+
+					<div class="col-sm-6">
+						<div class="row ">
+							<div class="box " [ngClass]="{'active': PRE_PRIMARY_SCHOOL_sub}">
+								<a (click)="tab('PRE_PRIMARY_SCHOOL_sub')" >
+									PRE PRIMARY SCHOOL				
+
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': PRIMARY_SCHOOL_sub}">
+								<a (click)="tab('PRIMARY_SCHOOL_sub')" >
+									PRIMARY SCHOOL
+								</a>
+							</div>
+
+							<div class="box" [ngClass]="{'active': Grades_6_to_12_sub}">
+								<a  (click)="tab('Grades_6_to_12_sub')">
+									Grades 6 to 12
+								</a>
+							</div>						
+						</div>
+					</div>
+					<div class="col-sm-6" *ngIf="PRE_PRIMARY_SCHOOL_sub">
+						<h2>PRE PRIMARY SCHOOL</h2>
+						<ul >
+							<li>Each section with optimal student-teacher ratio.</li>
+							<li>Curriculum focuses on developing basic communication and comprehension skills</li>
+							<li>Activity based teaching to make learning enjoyable</li>
+							<li>Separate play area and swimming pool for toddlers</li>
+							<li>Multimedia interactive content to facilitate assimilation of concepts</li>
+							<li>A separate play field equipped with the most modern Jungle Gym</li>	
+						</ul>
+					</div>
+					<div class="col-sm-6" *ngIf="PRIMARY_SCHOOL_sub">
+						<h2>PRIMARY SCHOOL</h2>
+						<ul>
+							<li>Curriculum designed to complement classroom teaching with the innovative use of technology</li>
+							<li>Computers are an integral part of teaching and learning</li>
+							<li>Computer centre (with internet connection) to facilitate theoretical application to practice</li>
+							<li>Well-stocked library to encourage enquiry and exploration</li>
+							<li>Learning designed to integrate the curricular with the co-curricular</li>
+							<li>Separate wings for the performing arts, and an auditorium for honing acting skills/music/dance</li>
+							<li>Facilities for swimming, basketball, table tennis and volleyball</li>
+							<li>Facilities for indoor and outdoor sports with a separate play field/multi purpose Hall</li>
+						</ul>
+					</div>
+					<div class="col-sm-6" *ngIf="Grades_6_to_12_sub">
+						<h2>Grades 6 to 12</h2>
+						<ul>
+							<li>Each section may have a maximum of 40 children</li>
+							<li>Curriculum comprises advanced courses through modern learning aids and state-of-the-art multimedia facilities</li>
+							<li>Hi-tech laboratories for Chemistry, Biology, Physics, Social Science, Mathematics and Robotics. Language laboratories for developing communication skills</li>
+							<li>Excursions, exchange programmes and projects, form a regular part of the curriculur</li>
+						</ul>
+					</div>
+
+				</div>		
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Streams & Subjects -->
+	<div class="row mt-2" *ngIf="STREAMS">
+		<div class="container-fluid bg-light p-5">
+			<div class="col-sm-11 mx-auto">		
+				<div class="row  ">
+
+					<div class="col-sm-6">
+
+
+
+
+
+						<div class="row ">
+							<div class="box " [ngClass]="{'active': SCIENCE_STREAM_sub}">
+								<a  (click)="tab('SCIENCE_STREAM_sub')">
+									SCIENCE STREAM
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': COMMERCE_STREAM_sub}">
+								<a (click)="tab('COMMERCE_STREAM_sub')" >
+									COMMERCE STREAM
+
+								</a>
+							</div>
+
+							<div class="box" [ngClass]="{'active': HUMANITIES_STREAM_sub}">
+								<a (click)="tab('HUMANITIES_STREAM_sub')" >
+									HUMANITIES STREAM
+
+								</a>
+							</div>
+
+
+
+						</div>
+					</div>
+					<div class="col-sm-6" *ngIf="SCIENCE_STREAM_sub">
+						<h2>SCIENCE STREAM</h2>
+						<b>Group - A:</b>
+
+						<ul>
+							<li>Physics</li>
+							<li>Chemistry</li>
+							<li>Mathematics</li>
+							<li>Computer Science/Economics/Physical Education/Entrepreneurship/Painting/psychology</li>
+						</ul>
+
+
+
+
+						<b>Group B:</b>
+						<ul>
+
+							<li>Physics</li>
+							<li>Chemistry</li>
+							<li>Biology</li>
+							<li>Physical Education/Entrepreneurship/Painting/psychology/Economics/Computer Science</li>
+							<li>English Core is a common subject for all the above mentioned combinations. The combination scheme of the subjects may be changed as required/advised by the CBSE.</li>
+							<li>No change of subjects is permitted after CBSE Registrations in Grade XI.</li>
+							<li>Students who pass the All India Secondary School Curriculum and CCE-assessment of CBSE (Class-X) do not automatically qualify for admission to Grade-XI. The school reserves the right to refuse admission to any student whose conduct or Academic Performance is not up to the mark in accordant to the provisions of CBSE.</li>
+						</ul>
+
+					</div>
+					<div class="col-sm-6" *ngIf="COMMERCE_STREAM_sub">
+						<h2>COMMERCE STREAM</h2>
+						<b>Group - A:</b>
+
+						<ul>
+							<li>Business Studies</li>
+							<li>Accounts</li>
+							<li>Economics/Computer Science/Entrepreneurship/Painting/Psychology</li>
+							<li>Mathematics/Physical Education/Legal Studies/Kathak</li>
+						</ul>
+
+
+						<p>English Core is a common subject for all the above mentioned combinations. The combination scheme of the subjects may be changed as required/advised by the CBSE.</p>
+
+						<p>No change of subjects is permitted after CBSE Registrations in Grade XI.</p>
+
+						<p>Students who pass the All India Secondary School Curriculum and CCE-assessment of CBSE (Class-X) do not automatically qualify for admission to Grade-XI. The school reserves the right to refuse admission to any student whose conduct or Academic Performance is not up to the mark in accordant to the provisions of CBSE.  </p>
+					</div>
+					<div class="col-sm-6" *ngIf="HUMANITIES_STREAM_sub">
+						<h2>HUMANITIES STREAM</h2>
+						<b>Group - A:</b>
+						<ul>
+							<li>History</li>
+							<li>Political Science</li>
+							<li>Economics/Computer Science/Entrepreneurship/Painting/Psychology</li>
+							<li>Mathematics/Physical Education/Legal Studies/Kathak</li>
+							<li>English Core is a common subject for all the above mentioned combinations. The combination scheme of the subjects may be changed as required/advised by the CBSE.</li>
+
+							<li>No change of subjects is permitted after CBSE Registrations in Grade XI.</li>
+
+							<li>Students who pass the All India Secondary School Curriculum and CCE-assessment of CBSE (Class-X) do not automatically qualify for admission to Grade-XI. The school reserves the right to refuse admission to any student whose conduct or Academic Performance is not up to the mark in accordant to the provisions of CBSE.</li>
+						</ul>
+
+					</div>
+
+				</div>		
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<!-- the dps edge -->
+	<div class="row mt-2 " *ngIf="THE_DPS">
+		<div class="container-fluid bg-light p-5">
+			<div class="col-sm-11 mx-auto">		
+				<div class="row  ">
+
+					<div class="col-sm-6">
+						<div class="row ">
+							<div class="box " [ngClass]="{'active': DPS_SOCIETY_sub}">
+								<a   (click)="tab('DPS_SOCIETY_sub')">
+									DPS SOCIETY
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': WHY_DPS_sub}">
+								<a  (click)="tab('WHY_DPS_sub')">
+									WHY DPS
+
+								</a>
+							</div>
+
+							<div class="box" [ngClass]="{'active': OUR_OFFER_sub}">
+								<a  (click)="tab('OUR_OFFER_sub')">
+									OUR OFFER
+
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': OUR_CURRICULUM_sub}">
+								<a  (click)="tab('OUR_CURRICULUM_sub')">
+									OUR CURRICULUM
+
+								</a>
+							</div>
+
+							<div class="box" [ngClass]="{'active': OUR_PEDAGOGY_sub}">
+								<a  (click)="tab('OUR_PEDAGOGY_sub')">
+									OUR PEDAGOGY
+
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': BEYOND_ACADEMIA_sub}">
+								<a (click)="tab('BEYOND_ACADEMIA_sub')" >
+									BEYOND ACADEMIA
+
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': EVALUATIONS_sub}">
+								<a (click)="tab('EVALUATIONS_sub')">
+									EVALUATIONS
+
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6" *ngIf="DPS_SOCIETY_sub">
+						<h2>DPS SOCIETY</h2>
+						<p>A Strong Foundation Built on Values, Traditions and Relationships.</p>
+
+						<p>The Delhi Public School Society has come a long way since it was established in 1949. With over 200 DPSs spread across the globe, the Society has been extremely successful in meeting its objective of providing quality education. That is because the DPS Society has been committed to a non-profit, non-proprietary pursuit of educational excellence since it was set up. In doing so, the Society has provided education to all by contributing to individual and national progress.</p>
+					</div>
+					<div class="col-sm-6" *ngIf="WHY_DPS_sub">
+						<h2>WHY DPS</h2>
+						<p>Delhi Public Schools, managed by The Delhi Public School Society, East of Kailash, New Delhi are one of the largest chains in public schools in India and abroad with over 200 members. Over a period of sixty years DPS has gathered experience and knowledge in managing K-12 education as few others have and this depth finds reflection in the way education is imparted in our schools. DPS believes in not just educating but in nurturing each student as the leader for tomorrow- a fact borne out by the eminence of the alumni of this chain all over the globe.</p>
+					</div>
+					<div class="col-sm-6" *ngIf="OUR_OFFER_sub">
+						<h2>OUR OFFER</h2>
+						<p>DPS promises to deliver world-class holistic education to its students: education that imparts knowledge by instilling confidence. Students are encouraged to ask questions instead of merely answering them because we believe that a curious mind is the receptacle of learning. We allow young children to explore because we believe that learning cannot be confined within the four walls of the classroom and that there is no better teacher than nature. We have embraced technology and innovation with an open mind becuase children of this millennium have to master technology and not become its slave.</p>
+						<p>Our efforts are backed by the ergonomic and scientifically designed campuses which are a learning space as a whole. Emphasis has been laid on utilising natural resources to the fullest. Students are taught the importance of environmental conservation through conscious minimising and recycling of waste making the school a zero-tolerant zone for plastic poly-bags.</p>
+					</div>
+					<div class="col-sm-6" *ngIf="OUR_CURRICULUM_sub">
+						<h2>OUR CURRICULUM</h2>
+						<p>The curriculum at our School assimilates the best from various sources and inspirations. There is a sustained balance between theoretical and practical knowledge imparted to students in their best academic interest. A plethora of co-scholastic and co-curricular activities are integrated with the mainstream curriculum, in order to ensure holistic development of our scholars. This empowers the children to unfurl their creativity and apply the acquired cognitive skills into real life situations, thereby letting them embark on a journey of self-discovery, In order to promote stress free and non-coercive learning, homework and assignment content are minimal as well as thought provoking.</p>
+					</div>
+					<div class="col-sm-6" *ngIf="OUR_PEDAGOGY_sub">
+						<h2>OUR PEDAGOGY</h2>
+						<p>Each teacher on our campus plays multiple roles which extend to being a friend, philosopher and mentor to the young inquisitive minds and souls. DPS believes that 'a satisfied teacher is a good teacher' and in order to ensure this teachers are put through various re-skilling and training programmes conducted on and off campus.  </p>
+
+						<p>DPS is modelled on the concept of a holistic educational institution designed to promote physical, mental and social develop- ment. A carefully planned academic and non-academic curriculum ensures a thorough understanding of basic concepts, thus laying a strong foundation for a sound education.</p>
+
+						<p>At DPS we encourage each and every student to participate in cultural, literary and social activities on and off campus. Activity periods built into the curriculum open avenues of exploration and pursuit of hobbies. Impetus to sports encourages participation in various indoor and outdoor sporting disciplines fostering team spirit, loyalty and unity–the essential components of the learning process.</p>
+
+					</div>
+					<div class="col-sm-6" *ngIf="BEYOND_ACADEMIA_sub">
+						<h2>BEYOND ACADEMIA</h2>
+						<p>A healthy body and a mind that can appreciate nuances of aesthetics in nature and diverse human activity are essential requisites of a balanced human being. To facilitate that, the school's calendar contains a host of co-curricular activities that cover a very wide spectrum of events round the year. Performing and visual arts, sports and games, environmental studies, meditation and yoga are practiced as a part of the routine. Thematic events are organised at regularintervals. Children are exposed to real world experience through interaction with the community. Trips and excursions to places of historical and social importance make them aware and informed. They also get opportunities to interact with experts and resource persons from various fields of human endeavor. </p>
+					</div>
+					<div class="col-sm-6" *ngIf="EVALUATIONS_sub">
+						<h2>EVALUATIONS</h2>
+						<p>Evaluation for us is sacrosanct and not merely a tool to judge the capacity of a child to memorize printed information. Evaluation is done via aptitude and skill based tests. These are used to understand every individual's learning curve, capabilities and optimise each student's study program. Evaluation also includes areas such as essential life skills, conceptual development, personal attributes, social, emotional and behavioral development, work habits, etc. thereby incorporating in true spirit the CCE (Comprehensive and Continuous Evaluation) vision of CBSE. </p>
+
+					</div>
+
+				</div>		
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<!-- co curricular-->
+	<div class="row mt-2"  *ngIf="co_curr">
+		<div class="container-fluid bg-light p-5">
+			<div class="col-sm-11 mx-auto">		
+				<div class="row  ">
+
+					<div class="col-sm-6">
+						<div class="row ">
+							<div class="box " [ngClass]="{'active': saturday_competition_sub}"> 
+								<a  (click)="tab('saturday_competition_sub')">
+									saturday competition
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': SUMMER_CAMP_sub}">
+								<a (click)="tab('SUMMER_CAMP_sub')">
+									SUMMER CAMP
+								</a>
+							</div>
+
+							<div class="box" [ngClass]="{'active': PTM_sub}">
+								<a (click)="tab('PTM_sub')" >
+									PTM
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': BIRTHDAYS_sub}">
+								<a  (click)="tab('BIRTHDAYS_sub')">
+									BIRTHDAYS
+								</a>
+							</div>
+
+							<div class="box" [ngClass]="{'active': EDUCATIONAL_TRIPS_sub}">
+								<a  (click)="tab('EDUCATIONAL_TRIPS_sub')">
+									EDUCATIONAL TRIPS
+								</a>
+							</div>
+							<div class="box" [ngClass]="{'active': ADVENTURE_TRIP_sub}">
+								<a  (click)="tab('ADVENTURE_TRIP_sub')">
+									ADVENTURE TRIP
+								</a>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-sm-6" *ngIf="saturday_competition_sub">
+						<h2>saturday competition</h2>
+						<p>In order to provide more time to our students for co-curricular activities in the school and to help them achieve a certain level of proficiency in the discipline/ activity, the school conducts different competitions on Saturdays for students of grades I, II and III. </p>			
+					</div>
+					<div class="col-sm-6" *ngIf="SUMMER_CAMP_sub">
+						<h2>SUMMER CAMP</h2>
+						<p>In order to help our students to constructively utilise their time, we conduct a summer camp for two weeks before the summer vacation. The students of Grades  I to VIII join the Summer Camp and take part in activities like Art and Craft, Swimming, Vocal Music, Instrumental Music etc.</p>	
+					</div>
+					<div class="col-sm-6" *ngIf="PTM_sub">
+						<h2>PTM</h2>
+						<p>Parents are integral part of the child's education at our School. Give your child as much quality time as you can and there is no better way to complement the work that is done in school. Wth prior appointment you can meet class/subject teacher on any working second or fourth Saturday of the month.</p>	
+					</div>
+					<div class="col-sm-6" *ngIf="BIRTHDAYS_sub">
+						<h2>BIRTHDAYS</h2>
+						<p>The school undertakes to celebrate students birthday in class by offering a gift to the student and sweets to the class. So no student is permitted to bring any sweets or gifts to school.</p>				
+					</div>
+					<div class="col-sm-6" *ngIf="EDUCATIONAL_TRIPS_sub">
+						<h2>EDUCATIONAL TRIPS</h2>
+						<p>The school undertakes educational trips to the most famous places in Delhi and NCR to enrich student's knowledge about their heritage and culture. The school also initiates interactive talk sessions.</p>	
+					</div>
+					<div class="col-sm-6" *ngIf="ADVENTURE_TRIP_sub">
+						<h2>ADVENTURE TRIP</h2>
+						<p>To teach the children about rain forests, wildlife and to encourage the relationship with the outside world, we organise adventure based learning programs for our students. It also helps to explore interdependence and group dynamics.</p>
+
+						<b>These Programs are primarily designed for:</b>
+						<ul>
+							<li>Building Confidence and Self Worth in the students.</li>
+							<li>Helping students to challenge their mindsets and fears.</li>
+							<li>Building awareness of the basic teamwork and leadership.</li>
+							<li>Making students aware of their innate potential and build in "I CAN" and "I WILL" attitude.</li>
+							<li>Instilling basic life skills in students.  </li>
+						</ul>
+					</div>
+
+				</div>		
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+</div>
+

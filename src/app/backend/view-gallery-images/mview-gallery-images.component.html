@@ -1,0 +1,55 @@
+<div class="container-fluid" style="min-height: 800px">
+	<div class="row mt-5">
+		<div class="col-sm-12">	
+			<h4 class="mt-4 text-secondary text-center">View Gallery Images</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 text-center mt-5">				
+			<button type="button" class="btn btn-outline-dark m-4 pr-4 pl-4 pt-2 pb-2 active" (click)="getAll()">All</button>	
+			<button type="button" class="btn btn-outline-dark m-4 pr-4 pl-4 pt-2 pb-2" [ngClass]="{ 'active' : activeCat == item.name }" (click)="mainTab([item.name, item.id, item.Events[0].id])" *ngFor="let item of categoryArr">{{item.name}} </button>		
+		</div>
+	</div>
+	<div class="row bg-light p-5 mt-5" >	
+		<div class="col-sm-9">	
+			<div class="row">				
+				<div class="col-sm-3 " *ngFor="let item of imgArr">					
+					<div class="thumImg" style="position: relative;">
+						<a class=" btn btn-sm  btn-danger delImg text-light" (click)="trashMe(item.id)"><span class="icon-trash"></span></a>
+						<img [src]="item.thumbimageuri" alt="" class="img-thumbnail" (click)="showBig(item.imageuri)">	
+					</div>					
+				</div>				
+			</div>
+		</div>		
+		<div class="col-sm-3">
+			<div class="card">	
+				<div class="card-header"><h5 class="text-dark "><b>Images By Event</b></h5> </div>
+				<div class="card-body">
+					<div class="list-group-flush list-group-small" id="list-tab">
+						<span *ngFor="let item of eventsArr">
+							<a class="list-group-item list-group-item-action" id="list-home-list" (click)="runEvent([item.id, item.category_id])" >
+								{{item.name}}									
+							</a>					
+						</span>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+
+	<!-- overlay -->
+	<div class="overlay" *ngIf="overlay" (click)="hideOverlay()">
+		<img [src]="bigImage" alt="">
+	</div>
+
+	<div class="row mt-5 mb-5">
+		<div class="col-sm-11 mx-auto">
+			<button class="btn btn-secondary" (click)="loadMore()" [disabled]="loadMoreBtnHide">Load More</button>
+		</div>
+	</div>
+
+
+
+</div>
+
+

@@ -1,0 +1,64 @@
+<!-- for desktop -->
+
+<div class="leftSide" *ngIf="!mobile">
+	<div class="logoHolder">
+		<img src="../../assets/img/logo.png" alt="">
+	</div>
+	<ul>
+		<li><a routerLink="manage-gallery" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><span class="icon-settings"></span> Manage Gallery</a></li>
+		<li><a routerLink="view-all-gallery-images"  routerLinkActive="active" ><span class="icon-picture"></span> View Gallery Images</a></li>
+		<li><a routerLink="upload-gallery-images"  routerLinkActive="active" ><span class="icon-cloud-upload"></span> Upload Gallery Images</a></li>
+		<li><a routerLink="view-all-student-tc"  routerLinkActive="active" ><span class="icon-docs"></span> View All Student TC</a></li>
+		<li><a routerLink="upload-student-tc"  routerLinkActive="active" ><span class="icon-cloud-upload"></span> Upload Student TC</a></li>
+		<li><a routerLink="marquee"  routerLinkActive="active" ><span class="icon-cloud-upload"></span> Marquee</a></li>
+		
+	</ul>
+</div>
+
+<!-- for mobile or small device -->
+<div class="leftSideMobile" *ngIf="mobile" [ngStyle]="{'display':mobileShow?'block' : 'none'}">
+	<span class="closes icon-close" (click)="closeMenu()"></span>
+	<div class="logoHolder">
+		<img src="../../assets/img/logo.png" alt="">
+	</div>
+	<ul>
+		<li><a routerLink="manage-gallery" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><span class="icon-settings"></span> Manage Gallery</a></li>
+		<li><a routerLink="view-all-gallery-images"  routerLinkActive="active" ><span class="icon-picture"></span> View Gallery Images</a></li>
+		<li><a routerLink="upload-gallery-images"  routerLinkActive="active" ><span class="icon-cloud-upload"></span> Upload Gallery Images</a></li>
+		<li><a routerLink="view-all-student-tc"  routerLinkActive="active" ><span class="icon-docs"></span> View All Student TC</a></li>
+		<li><a routerLink="upload-student-tc"  routerLinkActive="active" ><span class="icon-cloud-upload"></span> Upload Student TC</a></li>
+		<li><a routerLink="marquee"  routerLinkActive="active" ><span class="icon-cloud-upload"></span> Marquee</a></li>
+	</ul>
+</div>
+
+
+
+
+
+
+<div class="rightSide" [ngStyle]="{'min-height': minHeight}" >
+	<div class="righttop">
+		<div class="container-fluid">
+			<div class="row">				
+				
+				<div class="col">
+					<h4 class="mt-3" *ngIf="!mobile">DPS Raj Nagar</h4>
+					<button class="btn btn-dark " *ngIf="mobile" (click)="menu()"><span class="icon-menu" style="margin: 0!important"></span></button>
+				</div>
+				<div class="col ">
+					<a  class="float-right text-white" (click)="logout()" style="cursor: pointer;"> <span class="icon-logout"></span>  Logout</a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+
+	
+	<router-outlet></router-outlet>
+	
+
+	<div class="footerBackend">DPS - Raj Nagar © 2017-2019</div>
+
+
+</div>

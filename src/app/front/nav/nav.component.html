@@ -1,0 +1,77 @@
+<div id="nav">
+	 <span class="menu">			 
+		<div id="nav-icon3" >
+			<div>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="iconMenu">MENU</div>
+		</div>
+	 </span> 
+	<ul class="mainNav">
+		<li class="homeNav">				
+			<a routerLink="/home"><span class="nav-home"></span>Home</a>
+		</li>
+		<li class="contactNav">				
+			<a routerLink="/contact-us"><span class="nav-contact"></span>Contact</a>
+		</li>
+		<li class="studentTcNav">				
+			<a routerLink="/student-tc"><span class="nav-tc"></span>Student TC</a>
+		</li>
+		
+	</ul>
+	<div class="nav-slider" >
+		<ul class="slider-main">
+			<li class="about-us">
+				<span class="grpNav">	
+					About Us
+					<span class="down-arrow"></span>
+				</span>
+				<ul class="subMenu">
+					<li class="principalMsgNav">
+						<a (click)="prinMsg()">
+							<span class="prinMessege-icon"></span>
+							Principal's Message
+						</a>
+					</li>
+					<li class="aboutDPSNav">
+						<a  (click)="abtDPS()" > 
+							<span class="abtDPSRaj-icon"></span>
+							About DPS Rajnagar
+						</a>
+					</li>
+					<li class="aboutDPSNav">
+						<a  (click)="milestone()" >
+							<span class="mile-icon"></span>
+							Our Milestones
+						</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="about-us aboutDPSSecurity" >				
+				<a routerLink="/security">Security</a>						
+
+			</li>		
+			<li class="academics academicsNav" >
+				<a routerLink="/acedmic">Academics</a>
+			</li>
+			<li class="gallery GalleryNav">
+				<a routerLink="/gallery">Gallery</a>
+			</li>
+			<li class="studentAchivers StudentAchieversNav">
+				<a (click)="goToAchiver()">Student Achievers</a>
+			</li>
+			<li class="gallery GalleryNav">				
+				<a routerLink="/admission-query">Admission Query</a>
+			</li>
+		</ul>
+
+		<div class="admission admissionNav">
+			<span class="admissionIcon"></span>
+			<a routerLink="/admission" class="text-dark" style="display: inline-block; cursor: pointer;">Admission</a>
+		</div>
+	</div>
+</div>

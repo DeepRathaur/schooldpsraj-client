@@ -1,0 +1,383 @@
+<!-- slider -->
+<div class="slider-holder">
+	<span class="naviLeft"></span>
+	<span class="naviRight"></span>
+	<!-- <img src="img/loading.gif" id="loadSlider" alt=""> -->
+	<div class="firstImage" id="1" *ngIf="dektoBigImage">
+	</div>
+	<div class="secondImage" id="2" *ngIf="dektoBigImage">
+	</div>
+
+	<div class="slidArow"></div>
+	<app-marquee-front></app-marquee-front>
+</div>
+<div class="mobileBanner">
+	
+</div>
+
+
+<!-- service before self -->
+<div class="selfBeforeService">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-11 mx-auto">
+				<div class="row  pt-5 pb-5 ">
+					<div class="col-sm-7 text-white">
+						<h2>Service Before Self</h2>
+						<h5 ><i> <span class="qteSelfBefr">"</span>At the heart of DPS Rajnagar is the DPS learning experience which appreciates and understands the complexity and seriousness of educating children. We seek to develop each child’s unique individual abilities through a scientifically designed academic programme. DPS Rajnagar offers parents a unique schooling experience. The school looks after all the academic and physical needs of your child including extra teaching inputs.<span class="qteSelfBefr">"</span></i></h5>
+					</div>
+					<div class="col-sm-5 pt-5">						
+						<iframe id="youtube"  src="https://www.youtube.com/embed/OyQYB_07hTU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+
+
+<!-- 360 -->
+
+<app-three-sixty></app-three-sixty>
+
+
+<!-- learning experience -->
+<div class="learningExperience">
+	<div class="container-fluid" style="background: #f5f5f5;">
+		<div class="col-sm-11 mx-auto">
+			<div class="row pt-5 mt-5">
+				<div class="col"><h2>The DPS Learning Experience</h2>	</div>
+			</div>
+			
+			<div class="row pb-5 ">
+				<div class="col-sm-3">
+					<ul class="nav nav-pills" role="tablist">
+						
+						<li class="nav-item " >
+							<a class="nav-link  rounded-0 active show" data-toggle="pill" href="#artfirst"  ><span class="art-first"></span>Art 1st</a>
+						</li>						
+						<li class="nav-item " >
+							<a class="nav-link  rounded-0 " data-toggle="pill" href="#BookProject" (click)="bookProjectFun()"><span class="BookProject"></span>Book Project</a>
+						</li>
+						<li class="nav-item " >
+							<a class="nav-link  rounded-0 " data-toggle="pill" href="#Edutainment" (click)="edutainmentFun()"><span class="Edutainment"></span>Edutainment</a>
+						</li>
+						<li class="nav-item " >
+							<a class="nav-link  rounded-0 " data-toggle="pill" href="#Junoon" (click)="junoonLoadImg()"><span class="Junoon"></span>Junoon</a>
+						</li>							
+						<li class="nav-item ">
+							<a class="nav-link rounded-0" data-toggle="pill" href="#MusicArts" (click)="musicFun()" ><span class="MusicIcon"></span>Music & Arts</a>
+						</li>
+						<li class="nav-item ">
+							<a class	="nav-link rounded-0" data-toggle="pill" href="#ClubsSocieties"  (click)="clubFun()"><span class="ClubsIcon"></span>Co-curricular </a>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link rounded-0" data-toggle="pill" href="#Olympiad" (click)="olympiadFun()"><span class="Olympiad"></span>Olympiad</a>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link rounded-0 " data-toggle="pill" href="#Sports" (click)="sportsFun()"><span class="IndoorIcon"></span>Sports</a>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link rounded-0 "  href="https://www.facebook.com/dpsrn/" target="_blank" ><span class="quiz" style="margin-right: 1px !important"></span>Online Quiz</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-9">
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div id="artfirst" class="container-fluid tab-pane active">
+							<div class="row">
+								<div class="col">
+									<h5 style="font-style: italic; font-size: 1em; margin-top: 7px;">At DPS RN training in visual art is not limited to applying colours or sketching on a surface but it works at many levels to develop aesthetics, appreciation and constructing a visual grammar. Right from pre primary students are trained to observe without loosing perspective and some of these are core scientific skills. Hence art even delineates the spectrum of scientific attitude</h5>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let item of artFirstMain">
+									<img [src]="item.urls" alt="" class="img-thumbnail">	
+								</div>	
+
+								
+							</div>
+						</div>
+
+						<div id="BookProject" class="container-fluid tab-pane fade ">
+							<div class="row">
+								<div class="col">
+									<h5 style="font-style: italic; font-size: 1em; margin-top: 7px;">Children have a world of their own. Here at school we provide them a canvas to etch out their feelings which cascade out into beautiful stories. The collection of these outpourings is OFF THE BEATEN PATH</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let item of bookProjectMain">
+									<img [src]="item.urls" alt="" class="img-thumbnail m-2">	
+								</div>								
+
+							</div>
+						</div>
+
+						<div id="Edutainment" class="container-fluid tab-pane fade ">
+							<div class="row">
+								<div class="col">
+									<h5 style="font-style: italic; font-size: 1em; margin-top: 7px;">
+										"Wow! Beyond imagination" , said one parent who saw her ward , presenting his research on the stage. Captivating performances which will compel you to applaud. 
+									</h5>
+								</div>
+							</div>
+							<div class="row">								
+								<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let item of edutainmentMain"><img [src]="item.urls" alt="" class="rounded m-2">	</div>								
+
+
+								
+							</div>
+						</div>
+
+						<div id="Junoon" class="container-fluid tab-pane fade ">
+							<div class="row">
+								<div class="col">
+									<h5 style="font-style: italic; font-size: 1em; margin-top: 7px;">
+										Junoon is a bouquet of visual and performing art activities encompassing a week which culminat into candid expressions of students where they create the whole show on the last day. Brainchild of actor Sanjana Kapoor daughter of legendary Shashi Kapoor, it brings in artists from all across India to interact with students. 
+									</h5>
+								</div>
+							</div>
+							<div class="row">								
+								<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let item of junImg"><img [src]="item.urls" alt="" class="rounded m-2"></div>								
+							</div>
+						</div>
+
+						<div id="Sports" class="container-fluid tab-pane fade ">
+							<div class="row">
+								<div class="col">
+									<h5 style="font-style: italic; font-size: 1em; margin-top: 7px;">
+										DPS RAJNAGAR has a state of the art sports infrastructure. Half Olympic size covered Swimming pool prepares children for this important life skill. Eight layered special synthetic surface two Basket Ball and two Tennis court prevents knee and leg injuries and provide ample space for practice.  School has soccer court much loved by the children and two cemented cricket pitches for all weather practice. Indoor skating , Badminton, TT , carrom and Chess are the other highlights of the school. 
+									</h5>
+									<h5 style="font-style: italic; font-size: 1em; margin-top: 7px;">Students try their hands at Volleyball and practice in Long Jump pits for building leg muscle strength along with developing prowess in the said event. We have cemented circles for throwing Shot Put and Discuss. Students have won accolades and have honed their skills. 							
+									</h5>
+								</div>
+							</div>
+
+
+
+
+							<div class="row">
+								<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let item of sportsMain"><img [src]="item.urls" alt="" class="rounded m-2"></div>								
+							</div>
+						</div>
+						<div id="MusicArts" class="container-fluid tab-pane fade">								
+							<div class="row">								
+								<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let item of musicMain"><img [src]="item.urls" alt="" class=" rounded">	</div>								
+								
+							</div>
+						</div>
+						<div id="ClubsSocieties" class="container-fluid tab-pane fade">
+
+							<div class="row">
+								<div class="col">
+									<h5 style="font-style: italic; font-size: 1em; margin-top: 7px;">
+										Co-curricular activities are interwoven	along with Scholastic studies, so that students are able to assimilate the nuances of diverse skills in the dynamic Educational space through various forums. Summer camp, Pratibha ki udaan, assemblies, celebration of thematic weeks and so on give children a chance to express and excel. 
+									</h5>
+								</div>
+							</div>
+
+
+							
+							<div class="row">								
+								<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let item of clubMain"><img [src]="item.urls" alt=""  class="m-2 rounded"></div>							
+								
+							</div>
+						</div>
+						<div id="Olympiad" class="container-fluid tab-pane fade" >								
+							<div class="row">
+								<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let item of OlympiadMain">
+									<img [src]="item.urls" alt=""  class="m-2">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Student Achiver -->
+
+<div class="studentAchiver" id="achiverSec">
+	<div class="container-fluid">
+		<div class="col-sm-11 mx-auto">
+			<div class="studentAchiver mt-4 pt-5">
+				
+				<div class="row">
+					<div class="col">
+						<h2><span class="achiverIcon"></span>Student Achievers</h2>
+					</div>	
+
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="float-right">
+							<button class="btn btn-sm btn-success text-white " (click)="showTwelth()">12<sup>th </sup> Toppers</button>
+							<button class="btn btn-sm btn-success text-white " (click)="showtenth()">10<sup>th </sup> Toppers</button>	
+						</div>				
+					</div>
+				</div>
+				<div class="row mt-2 twelthHolder" *ngIf="twelthHolder">
+					<div class="col-sm-12">
+						<div class="archGroup text-center">
+							<div class="itemAchiver animated infinite pulse delay-2s">
+								<span class="imgs">
+									<img src="../../assets/img/Ach_11.jpg" alt="">	
+									<span class="topperText">All India Topper</span>						
+								</span>
+								<div class="content">
+									<span>Nakul Gupta <br></span>
+									<span>99.4%<br></span>
+									<span>Class - 12<sup>th</sup><br></span>
+									<span>Humanities<br></span>
+								</div>
+							</div>
+							<div class="itemAchiver ">
+								<span class="imgs">
+									<img src="../../assets/img/Ach_1.jpg" alt="">							
+								</span>
+								<div class="content">
+									<span>Pragun Gupta <br></span>
+									<span>96.6%<br></span>
+									<span>Class - 12<sup>th</sup><br></span>
+									<span>Science<br></span>
+								</div>
+							</div>
+							<div class="itemAchiver">
+								<span class="imgs">
+									<img src="../../assets/img/Ach_3.jpg" alt="">							
+								</span>
+								<div class="content">
+									<span>Suneel Kumar <br></span>
+									<span>93.8%<br></span>
+									<span>Class - 12<sup>th</sup><br></span>
+									<span>Commerce<br></span>
+								</div>
+							</div>
+
+							<div class="itemAchiver">
+								<span class="imgs">
+									<img src="../../assets/img/Ach_4.jpg" alt="">							
+								</span>
+								<div class="content">
+									<span>Kritika Singhal <br></span>
+									<span>93.8%<br></span>
+									<span>Class - 12<sup>th</sup><br></span>
+									<span>Commerce<br></span>
+								</div>
+							</div>
+							<div class="itemAchiver">
+								<span class="imgs">
+									<img src="../../assets/img/Ach_5.jpg" alt="">							
+								</span>
+								<div class="content">
+									<span>Keshav Chadha <br></span>
+									<span>93.8%<br></span>
+									<span>Class - 12<sup>th</sup><br></span>
+									<span>Commerce<br></span>
+								</div>
+							</div>
+						</div>			
+					</div>
+				</div>
+				<div class="row mt-2 tenthHolder" *ngIf="tenthHolder">
+					<div class="col-sm-12">
+						<div class="archGroup text-center">
+							<div class="itemAchiver">
+								<span class="imgs">
+									<img src="../../assets/img/Ach_6_10.jpg" alt="">							
+								</span>
+								<div class="content">
+									<span>Garima Aggarwal <br></span>
+									<span>96.8%<br></span>
+									<span>Class - 10<sup>th</sup><br></span>							
+								</div>
+							</div>
+						</div>			
+					</div>			
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- testimonial -->
+
+
+
+
+
+
+<div class="testimonial" id="testimonial" >
+	<div class="happyParents" id="happyParents">
+		<div class="container-fluid">
+			<div class="col-sm-11 mx-auto">
+				
+
+				<div class="row mt-5 ">
+					<div class="col">
+						<span class="happyParentsIcon" style="font-family: 'Kaushan Script', cursive;"></span>
+						<h2 class="text-dark hpHeading" style="font-family: 'Kaushan Script', cursive;">Happy Parents</h2>
+							
+					</div>	
+
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="col-sm-11 mx-auto">
+			<div class="testimonial ">			
+				<div class="row mt-2 ">
+					<div class="col-sm-3" *ngFor="let item of testmonials">
+						<img [src]="item.urls" class="m-2"width="400px" height="281px" alt="" >
+					</div>
+				
+
+				</div>	
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container-fluid">
+	
+
+	<div class="row mt-4">
+		<div class="col-sm-11 mx-auto">
+			<button class="btn btn-dark btn-sm  float-right " (click)="loadMoreTestimonial()" [disabled]="disableTestimonialBtn">Load More</button>
+		</div>
+	</div>
+</div>
+<br><br><br>

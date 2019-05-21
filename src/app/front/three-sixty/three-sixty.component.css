@@ -1,0 +1,294 @@
+
+img{max-width: 100%}
+.threeSix {
+	position: relative;
+}
+
+
+.threeSix span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 1.3em;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	max-width: 100px;
+	min-width: 75px;
+	font-size: 0.8em;
+	transition: all .2s ease-in-out;
+	cursor: pointer
+}
+
+span.Well_Strocked_Liberaries {
+	top: 36% !important;
+	left: 13% !important;
+}
+
+span.Specially_Abled_Friendly {
+	top: 14% !important;
+	left: 28% !important;
+}
+
+span.Resource_Center {
+	top: 15% !important;
+	left: 54% !important;
+}
+
+span.Counselor_Room {
+	top: 35% !important;
+	left: 69% !important;
+}
+
+span.Smart_Clases.Smart_Clases {
+	top: 59% !important;
+	left: 10% !important;
+	width: 57px !important;
+}
+
+span.GPN_Enabled_Buses {
+	top: 75% !important;
+	left: 27% !important;
+}
+
+span.Mulit_Specility_Clinic {
+	top: 57% !important;
+	left: 73% !important;
+}
+
+span.Security {
+	left: 56% !important;
+	top: 77% !important;
+}
+
+img#rotate {
+	position: absolute !important;
+	top: 43% !important;
+	width: 15% !important;
+	left: 43% !important;
+}
+
+
+
+.threeSix span:hover {
+	transform: scale(1.2) !important;
+	color:#000 !important;
+	font-weight: bold !important;
+}
+
+.threeSix span.active {			
+	color: #000 !important;
+	font-weight: bold !important;
+
+}
+
+
+
+@media only screen and (min-width: 280px) and (max-width: 300px){			
+	.threeSix span{
+		font-size: 0.5em !important ;
+	}
+	.threeSix span{
+		font-size: 0.6em  !important;
+	}
+	span.Specially_Abled_Friendly {			    
+		left: 20% !important;
+	}
+	span.Resource_Center {			    
+		left: 47% !important;
+	}
+	span.Counselor_Room {			 
+		left: 68% !important;
+		width: 71px !important;
+	}
+	span.Mulit_Specility_Clinic {
+		top: 56% !important;
+		left: 68% !important;
+		width: 50px !important;
+	}
+	span.Security {
+		left: 49% !important;
+		top: 77% !important;
+	}
+
+	span.Well_Strocked_Liberaries {
+		top: 36% !important;
+		left: 6% !important;
+	}
+	span.Smart_Clases.Smart_Clases {
+		top: 57% !important;
+		left: 8% !important;
+		width: 57px !important;
+	}
+	span.GPN_Enabled_Buses {
+		left: 19% !important;
+		top: 78% !important;
+	}
+}
+
+@media only screen and (min-width: 301px) and (max-width: 520px){
+	.threeSix span{
+		font-size: 0.6em  !important;
+	}
+	span.Specially_Abled_Friendly {			    
+		left: 20% !important;
+	}
+	span.Resource_Center {			    
+		left: 47% !important;
+	}
+	span.Counselor_Room {			 
+		left: 68% !important;
+		width: 71px !important;
+	}
+	span.Mulit_Specility_Clinic {
+		top: 56% !important;
+		left: 68% !important;
+		width: 50px !important;
+	}
+	span.Security {
+		left: 49% !important;
+		top: 77% !important;
+	}
+
+	span.Well_Strocked_Liberaries {
+		top: 36% !important;
+		left: 6% !important;
+	}
+	span.Smart_Clases.Smart_Clases {
+		top: 57% !important;
+		left: 8% !important;
+		width: 57px !important;
+	}
+	span.GPN_Enabled_Buses {
+		left: 19% !important;
+		top: 78% !important;
+	}
+}
+
+
+@media only screen and (min-width: 301px) and (max-width: 375px){			
+	.threeSix span{
+		font-size: 0.6em!important ;
+	}
+
+	.threeSix span {
+
+		max-width: 75px !important;;
+
+	}
+	span.GPN_Enabled_Buses[_ngcontent-c6] {
+		left: 23% !important;
+	}
+	span.Specially_Abled_Friendly[_ngcontent-c6] {
+		left: 24% !important;
+	}
+
+}
+@media only screen and (min-width: 376px) and (max-width: 420px){			
+	.threeSix span{
+		font-size: 0.7em!important ;
+	}
+	.threeSix span {
+		
+		max-width: 75px !important;
+		
+	}
+	span.Specially_Abled_Friendly{
+		left: 25% !important;
+	}
+	span.Resource_Center{
+		left: 52% !important;
+	}
+	span.GPN_Enabled_Buses{
+	    left: 25% !important;
+	    top: 78% !important;
+	}
+}
+
+@media only screen and (min-width: 421px) and (max-width: 500px){			
+	.threeSix span{
+		font-size: 0.8em!important ;
+	}
+	.threeSix span {
+		
+		max-width: 75px !important;
+		
+	}
+	span.Specially_Abled_Friendly {
+		left: 25% !important;
+	}
+	span.Resource_Center {
+		left: 52% !important;
+	}
+	span.Mulit_Specility_Clinic {
+		top: 56%!important;
+		left: 73% !important;
+		width: 50px !important;
+	}
+	span.Security {
+		left: 55% !important;			 
+	}
+	span.GPN_Enabled_Buses {
+		left: 26% !important;			    
+	}
+	span.Well_Strocked_Liberaries {
+		top: 36% !important;
+		left: 10% !important;
+	}
+}
+
+@media only screen and (min-width: 501px) and (max-width: 570px){			
+	.threeSix span{
+		font-size: 0.84em!important ;
+	}
+}
+
+
+@media only screen and (min-width: 570px) and (max-width: 890px){
+	.threeSix span{
+		font-size: 0.7em !important;
+	}
+	span.Specially_Abled_Friendly {				
+		left: 25%!important;
+	}
+	span.Mulit_Specility_Clinic {
+
+		left: 68%!important;
+	}
+
+	span.GPN_Enabled_Buses {				
+		left: 25%!important;
+	}
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1400px){
+	.threeSix span{
+		font-size: 0.6em !important;
+	}
+	span.Specially_Abled_Friendly {			    
+		left: 23% !important;
+	}
+	span.Mulit_Specility_Clinic {			 
+		left: 68% !important;
+	}
+	span.Resource_Center {			 
+		left: 50% !important;
+	}
+	span.GPN_Enabled_Buses {			 
+		left: 24% !important;
+	}
+}
+
+
+@media only screen and (max-width: 520px){
+
+	span.imgs {
+	    height: 192px!important;
+	}
+}
+
+
+
+
+

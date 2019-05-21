@@ -1,0 +1,19 @@
+.placeholder{
+	padding: 3em;
+}
+.progressContainer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #000;
+	z-index: 99999999;
+}
+.progress{
+	height: 4px;
+	background: #155724;
+	width: 0;
+	transition: width 0.5s;
+}
+

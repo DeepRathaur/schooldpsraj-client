@@ -1,0 +1,185 @@
+/*baner*/
+
+.bannerNew {
+    background: url(../../../assets/img/innerBanner/board.jpg) no-repeat center center;		
+    background-size: cover;	
+    height: 400px;				
+    position: relative;
+    
+}
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(39, 39, 39, 0.88);
+    z-index: 2;
+    cursor: pointer;
+  }  
+
+  #text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 32px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
+
+  #text p{
+    font-size: 18px;
+  }
+
+
+.innerNew {
+    display: block;
+    background: #000000ab;
+    width: 100%;
+    height: 400px;
+}
+.leftItem, .rightItem {
+    position: absolute;
+    top: 150px;
+    display: inline-block;
+    width:45%;
+}
+
+.rightItem {		
+    top: 120px;	
+    right: 5%;
+    text-align: right;	
+}
+
+
+
+.leftItem {
+    left: 7%;
+}
+
+
+
+
+.innerNew img {
+    width: 60% !important;
+}
+.rightItem img{
+    width: 25% !important;
+}
+
+
+
+@media only screen and (min-width: 1500px ) and (max-width: 1600px){
+    .rightItem img {
+        width: 36%!important
+    }
+}
+@media only screen and (min-width: 1300px ) and (max-width: 1499px){
+    .rightItem img {
+        width: 35%!important
+    }
+    
+}
+
+
+@media only screen and (min-width: 1100px ) and (max-width: 1299px){
+    .rightItem img {
+        width: 38%!important
+    }
+    
+}
+
+@media only screen and (min-width: 1000px ) and (max-width: 1099px){
+    .rightItem img {
+        width: 42%!important
+    }
+    
+}
+
+@media only screen and (min-width: 250px ) and (max-width: 520px){
+    .rightItem {
+        display: none!important;
+    }
+    .leftItem {
+        left: 3%;
+        text-align: center;
+        bottom: 0;
+        top: 45%;
+        right: 0;
+        margin: auto;
+    }
+    .innerNew img {
+        width: 120% !important;
+    }
+}
+
+
+/*inner baner*/
+.contact {
+display: block;	
+background: #fff;
+padding: 2%;
+}
+
+.form-group {
+margin-bottom: 1rem;
+margin: 13% 0;
+}
+.form-group:first-child {
+
+margin: 2% 0;
+}
+input, textarea{
+border-radius: 0 !important;
+border: 0 !important;
+border-bottom: 1px solid #000 !important;
+}
+
+button {
+width: 300px;
+background: #006a4e;
+border: none;
+color: #fff;
+line-height: 60px;
+text-transform: uppercase;
+font-size: 1.2em;
+margin-top: 68px;
+float: left;
+margin-bottom: 50px;
+}
+
+
+@media only screen and (min-width: 320px ) and (max-width: 520px){
+.bannerContact h1 {
+    margin-top: 38%;
+    font-size: 30px;
+}	
+
+.cmap {
+    margin-top: 28px;
+}
+.contactMap {
+
+    margin-bottom: 41% !important;
+}
+a.btn.btn-sm.btn-light.text-dark.mt-5 {
+    margin-top: 10px!important;
+    margin-bottom: 29px;
+}
+h4.mt-4.mb-5 {
+    margin-bottom: 10px!important;
+}
+
+button {
+    width: 200px;    
+    margin-top: 68px;    
+    margin-bottom: 156px;
+}
+
+}
+
+

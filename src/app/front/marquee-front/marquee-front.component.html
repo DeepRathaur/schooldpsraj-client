@@ -1,0 +1,17 @@
+
+
+	<div class="slider" *ngIf="marqueeFlg">
+      <marquee behavior="scroll" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+        <ul class="list-group">
+          <span *ngFor="let item of getArr">
+            <li class="mar list-group-item" *ngIf="item.status">
+              <span>
+                <span [innerHTML]="item.description"></span>
+                <a *ngIf="item.filepath !== null" class="btn btn-sm btn-warning" href="{{item.filepath}}">Click Here</a>
+              </span>
+            </li>
+          </span>
+        </ul>
+      </marquee>
+    </div>
+    

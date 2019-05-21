@@ -1,0 +1,165 @@
+<div class="container-fluid mt-5 mb-5">
+	<div class="row">
+		<div class="col-sm-11 mx-auto">
+		<div class="row">
+					<h2>360 Degree Integrated Campus</h2>
+
+		</div>
+			<div class="row">
+				<div class="col-sm-8 col-md-6 col-lg-6 col-xl-4 ">
+					<div class="threeSix ">
+						<img src="../../assets/img/360.png" alt="" >	
+						<span  class="Well_Strocked_Liberaries" (click)="run('library')" [ngClass]="{'animated infinite bounce delay-2s zoom':liberaryIcon}">Library</span>
+						<span  class="Security" (click)="run('security')" [ngClass]="{'animated infinite bounce delay-2s zoom':securityIcon}">Security</span>
+						<span  class="Mulit_Specility_Clinic" (click)="run('multiSpecialityClinic')" [ngClass]="{'animated infinite bounce delay-2s zoom':Mulit_Specility_ClinicIcon}">Multi Speciality Clinic</span>
+						<span  class="GPN_Enabled_Buses animated infinite bounce delay-2s zoom" (click)="run('GPS_Enabled_Buses')" [ngClass]="{'animated infinite bounce delay-2s zoom':gpsEnabledIcon}">GPS Enabled Buses</span>
+						<span  class="Smart_Clases Smart_Clases" (click)="run('Smart_Classes')" [ngClass]="{'animated infinite bounce delay-2s zoom':smartClassIcon}">Smart Classes</span>
+						<span  class="Specially_Abled_Friendly" (click)="run('Differently_Abled')" [ngClass]="{'animated infinite bounce delay-2s zoom':specialyAbledIcon}">Differently Abled <br > Friendly</span>
+						<span  class="Counselor_Room" (click)="run('Counsellor_room')" [ngClass]="{'animated infinite bounce delay-2s zoom':Counselor_RoomIcon}">Counsellor Room</span>
+						<span  class="Resource_Center" (click)="run('Resource_Centers')" [ngClass]="{'animated infinite bounce delay-2s zoom':Resource_CenterIcon}">Resource Centers</span>		
+						<img src="../../assets/img/360/rotate.gif" alt="" id="rotate">
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-6 col-lg-6 col-xl-8 mt-5">
+					<!-- smart Class -->
+					<div class="row"  *ngIf="smartClass">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 m-0 p-1"  *ngFor="let item of smartClassMain">
+							<img [src]="item.urls" alt="" class="img-thumbnail" >							
+						</div>
+											
+					</div>
+
+					
+					<!-- specialy abled -->
+					<div class="row"  *ngIf="specialyAbled">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 m-0 p-1" *ngFor="let item of diffAblFrdMan">
+							<img [src]="item.urls" alt="" class="img-thumbnail" >							
+						</div>												
+					</div>
+
+
+					<!-- GPS Enabled Buses -->
+					<div class="row"  *ngIf="gpsEnabled">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 m-0 p-1" *ngFor="let item of gpsEnabledMain">
+							<img [src]="item.urls" alt="" class="img-thumbnail" >							
+						</div>												
+					</div>
+
+
+
+					<!-- Counselor_Room -->
+					<div class="row"  *ngIf="Counselor_Room">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 m-0 p-1" *ngFor="let item of counselorRoomMain">
+							<img [src]="item.urls" alt="" class="img-thumbnail" >							
+						</div>												
+					</div>
+
+
+					<!-- Mulit_Specility_Clinic -->
+					<div class="row"  *ngIf="Mulit_Specility_Clinic">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 m-0 p-1" *ngFor="let item of multiSpecialityMain">
+							<img [src]="item.urls" alt="" class="img-thumbnail" >							
+						</div>												
+					</div>
+
+
+					<!-- Resource_Center -->
+					<div class="row"  *ngIf="Resource_Center">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 m-0 p-1" *ngFor="let item of resourceCenterMain">
+							<img [src]="item.urls" alt="" class="img-thumbnail" >							
+						</div>
+															
+					</div>
+
+
+					
+					<!-- security -->
+					<div class="row"  *ngIf="security">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 m-0 p-1 text-center" *ngFor="let item of securityMain">
+							<img [src]="item.urls" alt="" class="img-thumbnail" >							
+						</div>																
+					</div>
+
+
+
+					<!-- well stocked liber -->
+					<div class="row"  *ngIf="liberary">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 m-0 p-1"  *ngFor="let item of libriesMain">
+							<img [src]="item.urls" alt="" class="img-thumbnail" >							
+						</div>																	
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="page-main">
+	<div class="page-side">
+		<h2>360 Degree Integrated Campus</h2>
+		<div class="MailRoundHolder" style="position: relative;">
+			<img src="../../assets/img/360.png" width="600px" height="600px" alt="" id="mainThreeSixty" style="max-width: none">
+			<span class="text Smart_Clases  Smart_Clases animated infinite bounce delay-2s zoom" id="Smart_Clases">Smart Classes</span>
+			<span class="text Specially_Abled_Friendly" id="Specially_Abled_Friendly">Differently Abled <br> Friendly</span>
+			<span class="text GPN_Enabled_Buses" id="GPN_Enabled_Buses">GPS Enabled Buses</span>
+			<span class="text Counselor_Room" id="Counselor_Room">Counsellor Room</span>
+			<span class="text Mulit_Specility_Clinic" id="Mulit_Specility_Clinic">Multi Speciality Clinic</span>
+			<span class="text Resource_Center" id="Resource_Center">Resource Centers</span>
+			<span class="text Security" id="Security">Security</span>
+			<span class="text Well_Strocked_Liberaries" id="Well_Strocked_Liberaries">Library</span>
+		</div>
+	</div>
+	<div class="page-content mt-5"> 
+		<div class="imageHolderThreeSix">
+			<div class="Smart_Clases">							
+									
+			</div>
+			<div class="Specially_Abled_Friendly">
+				
+				
+			</div>
+			<div class="GPN_Enabled_Buses">
+				
+				
+			</div>
+			<div class="Counselor_Room">
+				
+			</div>
+			<div class="Mulit_Specility_Clinic">
+				
+				
+			</div>
+			<div class="Resource_Center">				
+				 
+
+			</div>
+			<div class="Security">				
+										
+			</div>
+			<div class="Well_Strocked_Liberaries">				
+				
+			</div>		
+		</div>
+	</div>                
+</div> -->

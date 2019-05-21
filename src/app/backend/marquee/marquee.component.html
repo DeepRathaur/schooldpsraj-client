@@ -1,0 +1,71 @@
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">Marquee</div>
+        <div class="card-body">
+            <!-- show content -->
+            <div class="row" *ngIf="showFlg">
+              <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr class="bg-light">
+                          <td>S. No</td>
+                          <td>Content</td>
+                          <td>Linked File</td>
+                          <td>Trash</td>
+                          <td>Status</td>
+                        </tr>
+                      </thead>
+                      <tr *ngFor="let item of getArr; let i = index">
+                        <td>{{i+1}}</td>
+                        <td [innerHTML]="item.description"></td>
+                        <td ><a class="btn btn-sm btn-success" *ngIf="item.filepath !== null" href="{{item.filepath}}" target="_blank">Download</a></td>
+                        <td>
+                          <button class="btn btn-sm btn-danger" (click)="trash(item.id)"><span class="icon-trash"></span></button>
+                        </td>
+                        <td>                        
+                          <label class="switch" >
+                            <input type="checkbox"  [checked]="item.status" (click)="update(item)" >                            
+                            
+                            <span class="slider round"></span>
+                          </label>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+            </div>
+            <!-- upload content -->
+            <div class="row" *ngIf="!showFlg">            
+              <div class="col-sm-4">
+                  <div class="card">
+                    <form #r="ngForm">
+                      <div class="card-header">Upload File</div>
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label for="">Select File</label>
+                          <input class="btn btn-light" #fileInput type="file" required (change)="fileHaveSelected($event)">
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <button class="btn btn-success" (click)="uploadApiCall()" [disabled]="!r.valid"> <span class="icon-cloud-upload"></span> Upload</button>
+                        <button class="btn  btn-warning" (click)="cancelUplod()">Cancel</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>            
+                <div class="col-sm-8">
+                  <ckeditor [(ngModel)]="uplodFil.description" [readonly]="false" debounce="500"></ckeditor>
+                </div>           
+            </div>
+
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-sm btn-success" (click)="uploadNew()" *ngIf="showFlg"><span class="icon-cloud-upload"></span> Upload New</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

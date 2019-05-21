@@ -1,0 +1,41 @@
+<div class="container-fluid">
+	<div class="row mt-5 text-center">
+		<div class="col-sm-12">
+			<h4 class="mt-4 text-secondary ">Upload Student TC</h4>
+		</div>
+	</div>
+	<div class="row mt-5">
+		<div class="col-sm-6 mx-auto">
+			<form #f="ngForm">
+			<div class="card">
+				<div class="card-header">Upload TC</div>
+				<div class="card-body">
+					<div class="form-group">
+						<label for="">Student Name	</label>
+						<input type="text" class="form-control" name="name" required [(ngModel)]="certificateTc.name">
+					</div>
+					<div class="form-group">
+						<label for="">Admission No</label>
+						<input type="text" class="form-control" name="admissionNo" required  [(ngModel)]="certificateTc.admission_no">
+					</div>
+					<div class="form-group">
+						<label for="">Description</label>
+						<input type="text" class="form-control" name="certificateDescription" required [(ngModel)]="certificateTc.certificate_description">
+					</div>
+					<div class="form-group">
+						<label for="">Select TC</label>
+						<input #fileInput type="file" class="form-control" name="selectedTC" required (change)="fileHaveSelected($event)" >
+					</div>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-info" (click)="uploadTc()" [disabled]="!f.valid"> Upload</button>
+					<span class="float-right text-success">{{msg}}</span>
+				</div>				
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="uploadOverlay" *ngIf="uploadIcon"><img src="../../../assets/img/hourglass.gif"></div>
+<!-- [disabled]="!f.valid" -->

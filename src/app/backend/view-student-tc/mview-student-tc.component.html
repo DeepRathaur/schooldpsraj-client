@@ -1,0 +1,60 @@
+<div class="container-fluid" *ngIf="!overlay">
+	<div class="row mt-5 text-center">
+		<div class="col-sm-12">
+			<h4 class="mt-4 text-secondary ">View All Student Tc</h4>
+		</div>
+	</div>
+
+
+	
+
+	<div class="row mt-5 mb-5">
+		<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<div class="form-group">
+					<label for="">Filter by Name</label>
+					<input type="text" name="searchfild" class="form-control" [(ngModel)]="searchFild" placeholder="Filter by Student Name">
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table table-sptrped table-bordered">
+						<thead>
+							<tr>
+								<td>S No.</td>
+								<td>Student Name</td>
+								<td>Admission No</td>
+								<td>Uploaded Tc</td>
+								<td>View Student TC</td>
+								<td>Remove</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let item of allTc; let i = index">
+								<td *ngIf="item.name|tcFilter:searchFild">{{i+1}}</td>
+								<td *ngIf="item.name|tcFilter:searchFild">{{item.name}}</td>
+								<td *ngIf="item.name|tcFilter:searchFild">{{item.admission_no}}</td>
+								<td class="text-center" *ngIf="item.name|tcFilter:searchFild">
+									<img [src]="item.certificate_url" alt="" width="100px" >									
+								</td>
+								<td *ngIf="item.name|tcFilter:searchFild">
+									<a  class="btn btn-info text-white" (click)="showBig(item.certificate_url)"><span class="icon-magnifier-add"></span></a>
+								</td>
+								<td *ngIf="item.name|tcFilter:searchFild"><button class="btn btn-danger" (click)="trashTc(item.id, i)"><span class="icon-trash"></span></button></td>							
+							</tr>						
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="card-footer"><button class="btn btn-info" (click)="loadMore()">Load More</button></div>
+		</div>			
+			
+			
+		</div>
+	</div>
+</div>
+<!-- {id: 102, name: "naresh", admission_no: 545454, certificate_description: "fsfsffsdfs", certificate_url: "xyz.com/tc/naresh-545454-1534850835720.jpg"} -->
+<div class="overlay" *ngIf="overlay" (click)="closeOverlay()">
+	<img [src]="img" alt="" [height]="innerHeig">
+</div>

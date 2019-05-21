@@ -1,0 +1,50 @@
+.admissionFix {
+    
+    position: fixed;
+    top: 43%;
+    z-index: 999;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    left: -187px !important;
+    padding: 10px;
+    border-radius: 0 2px 5px 5px;
+    left: -101px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+}
+
+.admissionFix a {
+    color: #000;
+        margin-left: 10px;
+}
+
+.fixAdmissionIcon{
+    background: url('../../assets/img/icons.png') no-repeat -648px -36px;
+    width: 29px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+.downloadIcon{
+    background: url('../../assets/img/icons.png') no-repeat -746px -140px;
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+        margin-right: 5px;
+}
+
+
+
+
+@media only screen and (max-width: 500px){
+
+    .admissionFix {
+        left: -168px !important;
+    }
+}
+    

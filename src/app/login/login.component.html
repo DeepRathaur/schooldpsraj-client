@@ -1,0 +1,38 @@
+<div class="bg">
+
+  <div class="backendLogo">
+   <a href="#" style="cursor: pointer"><img src="../../assets/img/logo.png" alt=""></a>
+  </div>
+
+
+  <div class="container">
+    <div class="gap"></div>
+    <div class="row">
+      <div class="col-sm-6 mx-auto">
+        <div class="card">
+          <div class="card-header">Login</div>
+          <div class="card-body">
+            <form >
+              <div class="form-group">
+                <label for="">User Name</label>
+                <input type="text" name="name" class="form-control" [(ngModel)]="loginUserData.email">
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" name="password" class="form-control" [(ngModel)]="loginUserData.password">
+              </div>
+
+              <!-- <label class="float-right" for=""><a href="#" class="text-danger"><small>Forget password</small></a></label> -->
+            </form>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-success" (click)="login()">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- { email: v.username, password: v.password } -->

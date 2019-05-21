@@ -1,0 +1,123 @@
+.social {
+	width: 155px;  
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.social span {
+	display: inline-block;
+	margin-right: 8px;
+}
+.twitter {
+	background: url('../../../assets/img/icons.png') no-repeat -584px -186px;
+	width: 39px;
+	height: 39px;
+}
+
+.google {
+	background: url('../../../assets/img/icons.png') no-repeat -645px -184px;
+	width: 38px;
+	height: 38px;
+}
+
+.facebook {
+	background: url('../../../assets/img/icons.png') no-repeat -698px -182px;
+	width: 38px;
+	height: 38px;
+}
+
+
+.admissionBottom {
+	background: url('../../../assets/img/icons.png') no-repeat -587px -138px;
+	width: 24px;
+	height: 24px;
+}
+
+.contactBottom {
+	background: url('../../../assets/img/icons.png') no-repeat -642px -140px;
+	width: 27px;
+	height: 20px;
+}
+
+
+
+span.admissionBottom, span.contactBottom, .payIcon {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btn-warning {   
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+
+.payIcon {
+	background: url('../../../assets/img/icons.png')  no-repeat -698px -142px;
+	width: 27px;
+	height: 19px;
+}
+
+.iconAnounce {
+	background: url('../../../assets/img/icons.png') no-repeat -113px -191px;
+	width: 41px;
+	height: 29px;
+}
+
+
+div.marquee > * {
+	display: inherit;
+}
+
+.marquee{
+	display: inline-block; width: 300px; margin-left: 47px; text-align: left; overflow: hidden;
+	
+}
+marquee {    
+	float: left;
+	margin-top: -50px;
+	margin-left: 42px;
+}
+
+@media only screen and (max-width: 500px) {
+	.social {
+		
+		position: relative;
+	}
+
+	.marquee {
+		display: inline-block;
+		width: 100%;
+		margin-left: 47px;
+		text-align: left;
+		overflow: hidden;
+		margin: 0 atuo !important;
+	}
+	a.btn.btn-sm.btn-warning.mr-3.text-dark {
+		margin-left: 32px;
+	}
+
+	button.btn.btn-sm.btn-warning {
+		margin-left: 13px;
+	}
+
+	button.btn.btn-sm.btn-warning {
+		margin-right: 12px;
+	}
+
+
+	.slider-footer > div {
+		display: block;
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+
+	.iconAnounce {
+		height: 42px;
+	}
+
+}

@@ -1,0 +1,93 @@
+<div class="container-fluid mt-5" *ngIf="!AddCategory && !AddEvent">
+	<div class="row mt-2 mb-4 ">
+		<div class="col-sm-12">
+			<h4 class="text-secondary text-center ">Upload Gallery Images</h4>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-sm-6 mx-auto">
+			<div class="card">
+				<form #r="ngForm">
+					<div class="card-header">Upload Image</div>
+					<div class="card-body">
+
+						<div class="form-group">
+							<label for="">Select Category</label>
+							<select name="" class="form-control" name="category" required [(ngModel)]="uploadGalleryImage.category_id">
+								<option value="{{item.id}}" *ngFor="let item of categoryArr">{{item.name}}</option>							
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="">Select Event</label>
+							<select name="" class="form-control" name="event" required [(ngModel)]="uploadGalleryImage.event_id">
+								<option value="{{item.id}}" *ngFor="let item of eventsArr">{{item.name}}</option>							
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="">Select File</label>
+							<input class="btn btn-light" #fileInput type="file" required (change)="fileHaveSelected($event)" >
+						</div>					
+					</div>
+					<div class="card-footer">
+						<button class="btn btn-success" (click)="upload()" [disabled]="!r.valid">Upload</button>					
+						<span class="float-right text-success">{{msg}}</span>
+						
+
+						<!-- <button class="btn btn-dark float-right m-2" (click)="addEvent()">Add New Event</button>					 -->
+						<!-- <button class="btn btn-dark float-right m-2" (click)="addCategory()">Add New Category</button>					 -->
+					</div>
+				</form>
+			</div>
+		</div>		
+	</div>	
+</div>
+<div class="uploadOverlay" *ngIf="uploadIcon"><img src="../../../assets/img/hourglass.gif"></div>
+
+<!-- add new category -->
+<div class="container-fluid mt-5" *ngIf="AddCategory">
+	<div class="row">
+
+		<div class="col-sm-6 mx-auto">
+			<div class="card">
+				<div class="card-header">Add New Category</div>
+				<div class="card-body">
+					<div class="form-group">
+						<label for="">Category Name</label>
+						<input type="text" class="form-control">
+					</div>				
+
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-success" (click)="saveCategory()">Save Category</button>										
+				</div>
+			</div>
+		</div>		
+	</div>	
+</div>
+
+
+<!-- add new Event -->
+<div class="container-fluid mt-5" *ngIf="AddEvent">
+	<div class="row">
+
+		<div class="col-sm-6 mx-auto">
+			<div class="card">
+				<div class="card-header">Add New Event</div>
+				<div class="card-body">
+					<div class="form-group">
+						<label for="">Event Name</label>
+						<input type="text" class="form-control">
+					</div>				
+
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-success" (click)="saveEvent()">Save Event</button>										
+				</div>
+			</div>
+		</div>		
+	</div>	
+</div>
